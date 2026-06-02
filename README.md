@@ -597,7 +597,7 @@ Known limitations:
 
 ## Citation
 
-If you use this work, cite the accompanying manuscript:
+If you use this work, cite the accompanying manuscript and the code (citation available in "CITATION.cff":
 
 ```bibtex
 @article{dalal_perseus_2026,
