@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Hallucination-Aware-Knowledge-Graph-Construction-with-LLMs
+authors:
+  - family-names: Dalal
+    given-names: Aryan Singh
+    orcid: https://orcid.org/0000-0003-0720-7306
+  - family-names: Kucuk McGinty
+    given-names: Hande
+    orcid: https://orcid.org/0000-0002-9025-5538
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/aryand1/Hallucination-Aware-Knowledge-Graph-Construction-with-LLMs"
