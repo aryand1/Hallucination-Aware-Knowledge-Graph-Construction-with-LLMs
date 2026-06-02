@@ -1,0 +1,850 @@
+sent_id,Subject,Predicate,Object,reason
+sent_0002,London,Midland and Scottish Railway Company,"employed, Tom Bradley",reject
+sent_0006,Walcott,was,in,reject
+sent_0007,Hezbollah,captured,two Israeli soldiers,reject
+sent_0010,NC 122,before,river,reject
+sent_0011,cliffdweller,is,a plant,reject
+sent_0011,bristlecone cryptantha,is,a plant,reject
+sent_0011,Inyo rock daisy,is,a plant,reject
+sent_0012,Assistant to the President,is,President,reject
+sent_0012,Deputy Assistant to the President,is,President,reject
+sent_0012,Special Assistant to the President,is,President,reject
+sent_0014,he,played,with the Astros,reject
+sent_0017,Sullivan County,located in,Pennsylvania,reject
+sent_0017,Lycoming County,located in,Pennsylvania,reject
+sent_0020,until,cooking,sliced raw potato,reject
+sent_0021,map,is used,country,reject
+sent_0022,They,gained,promotion in 1974,reject
+sent_0023,He,of,Kent,reject
+sent_0025,a,be,heretical,reject
+sent_0025,a,be,comedy,reject
+sent_0026,Byrom Street Cutting,became,a tunnel,reject
+sent_0026,Byrom Street Cutting,became,the tunnel,reject
+sent_0028,Cashel Byron,has,illegal profession,reject
+sent_0028,Cashel Byron,woos,Lydia Carew,reject
+sent_0028,Cashel Byron,does not reveal,illegal profession,reject
+sent_0029,A judge,ordered,a case,lex_score_zero
+sent_0029,A judge,reviewed,a case,lex_score_zero
+sent_0030,Britain,attempted,popularize,reject
+sent_0030,Lady Mary Wortley Montagu,attempted,popularize in,reject
+sent_0030,practice,observed,Lady Mary Wortley Montagu,reject
+sent_0031,Wallonia,is home to,the remainder,reject
+sent_0033,The Original Celtics,were,a,reject
+sent_0037,Parsley Hay,ran,Ashbourne,reject
+sent_0039,St. James Infirmary,was,a song,reject
+sent_0043,Duties,be,customary,reject
+sent_0043,Hellenistic era,is,time,reject
+sent_0044,He,working,singer,reject
+sent_0044,He,working,dancer,reject
+sent_0044,He,working,comedian,reject
+sent_0045,Israel,controlled,sector,reject
+sent_0045,sector,captured,Israel,reject
+sent_0046,Yaromir,has,Mlada,reject
+sent_0048,Cub Scout,are,staff members,reject
+sent_0048,Scout camps,are,staff members,reject
+sent_0048,Cub Scout camps,are,staff members,reject
+sent_0050,Institut Constant de Rebecque,is,a,reject
+sent_0050,Institut Constant de Rebecque,founded,Lausanne,reject
+sent_0051,Owen,believed,ills,reject
+sent_0051,Owen,believed,industrial work relations,reject
+sent_0051,Henri de Saint-Simon,believed,ills,reject
+sent_0051,Henri de Saint-Simon,believed,industrial work relations,reject
+sent_0052,Latchford viaduct,operational,when,reject
+sent_0052,Latchford viaduct,operational,to make extensive repairs,reject
+sent_0052,Latchford viaduct,operational,extensive repairs,reject
+sent_0052,Latchford viaduct,operational,repairs,reject
+sent_0052,Latchford viaduct,operational,to keep operational,unverified
+sent_0052,Latchford viaduct,operational,keep operational,unverified
+sent_0052,Latchford viaduct,operational,keep,reject
+sent_0052,Latchford viaduct,operational,operational,reject
+sent_0053,Kilmacud Crokes,of,2006 competition,reject
+sent_0053,2006 competition,has,Kilmacud Crokes,reject
+sent_0054,hotel,were,attacked,reject
+sent_0056,Kazan Dolls Theatre,was,worked in,reject
+sent_0056,Kazan theatres,was,worked in,reject
+sent_0057,April 13,1987,"occurred on, Iowa Terminal Railroad",reject
+sent_0059,the pair,running workshops,"became, Triangle Arts Trust",reject
+sent_0061,Arrangements,were made for,1944 performances,reject
+sent_0061,Arrangements,were made,for performances,reject
+sent_0061,Joseph Goebbels,closed,Third Reich theatres,reject
+sent_0061,Joseph Goebbels,declared,war total,reject
+sent_0061,Joseph Goebbels,closed,Third Reich theatres within,reject
+sent_0061,The 20 July plot,was,a,reject
+sent_0061,Hitler,was,assassinate,reject
+sent_0061,Hitler,was,assassinate by the 20 July plot,reject
+sent_0061,Hitler,was,assassinate by the plot,reject
+sent_0061,The Third Reich,was,closed by Joseph Goebbels,reject
+sent_0061,The Third Reich,was,closed by Goebbels,reject
+sent_0061,The Third Reich,was,closed theatres,reject
+sent_0061,The Third Reich,was,closed theatres by Joseph Goebbels,reject
+sent_0061,The Third Reich,was,closed theatres by Goebbels,reject
+sent_0063,Michael,has,job,reject
+sent_0063,Michael,goes,to a rival company,reject
+sent_0067,The first,occurred,in 1994,reject
+sent_0067,The first,occurred,in May,reject
+sent_0071,refusal to ratify the appointment,is,object of tolerance,reject
+sent_0073,Robin,work,Stephanie,reject
+sent_0073,Ariana,work,partners,reject
+sent_0073,Ariana,work,Robin,reject
+sent_0073,Robin,see,Ariana,reject
+sent_0073,Ariana,see,Robin,reject
+sent_0073,Robin,grow,closer,reject
+sent_0075,Conte Quinto Mazzolini,sought,recognition of Jewish sovereignty in Palestine,reject
+sent_0075,Conte Quinto Mazzolini,sought,placing Zionism under the aegis of Italian fascism,reject
+sent_0076,The series,has volume,first,reject
+sent_0078,Overseas teams,would not return,Russia,reject
+sent_0078,Overseas teams,return,Moscow,reject
+sent_0078,Russia,would not return,Overseas teams,reject
+sent_0081,U2,opened for,they,reject
+sent_0083,The performance,inspired,Ruby Hunter,reject
+sent_0085,Charles,disbanded,the army,reject
+sent_0088,John Crozier Jr.,began,"building, in the 1890s",reject
+sent_0088,John Crozier Jr.,in,Grainger County,reject
+sent_0089,Jasmine Roy,performs,vocalist,reject
+sent_0089,Rebeca Vega,performs,vocalist,reject
+sent_0091,Theories,continue,to be about,reject
+sent_0092,statue,behind,National Archives of Canada,reject
+sent_0092,statue,is located,behind National Archives of Canada,reject
+sent_0092,MacKenzie King,erected,statue,reject
+sent_0092,MacKenzie King,erected,statue of civil servants,reject
+sent_0094,England,is located in,Scotland,reject
+sent_0094,Scotland,is a part of,England,reject
+sent_0095,laser,is used for,cutting,reject
+sent_0099,I.I.T Madras,awarded,Ph.d degree,reject
+sent_0099,She,studied,Guidance,reject
+sent_0099,She,studied,Instrumentation,reject
+sent_0100,ground rents,are,at,reject
+sent_0101,vessel,turning turtle,is more dangerous,reject
+sent_0101,smaller boats,turning turtle,is less frequent,unverified
+sent_0101,smaller boats,turning turtle,is more dangerous,reject
+sent_0104,His Christian beliefs,fit,evidence,reject
+sent_0105,objects,contribute,significantly,reject
+sent_0106,he,won,at the European Championships,reject
+sent_0109,building,stayed,United States High Commissioner for Germany,reject
+sent_0110,Legislation,provides,police,reject
+sent_0110,Legislation,provides,death in the line of duty,reject
+sent_0110,Legislation,removes,death benefits,reject
+sent_0110,Legislation,removes,spouses,reject
+sent_0110,Legislation,removes,police officers,reject
+sent_0110,Legislation,removes,firefighters,reject
+sent_0111,surface,has nature,ionic,unverified
+sent_0111,surface,has nature,polar,reject
+sent_0111,water molecules,stand,upright,reject
+sent_0114,band of Reploids,marvel,Zero's skills,reject
+sent_0115,Fourier transform,of,signal,reject
+sent_0115,Magnitude,of,squared magnitude,reject
+sent_0116,an index visible filing system,was,sold in,reject
+sent_0116,an index visible filing system,was,sold in 1925,reject
+sent_0117,Honourable East India Company,had responsibility,providing a garrison,reject
+sent_0119,Mark,present,Drive Time,reject
+sent_0119,Mark,present,Marisa,reject
+sent_0119,Marisa,present,Drive Time,reject
+sent_0119,Mark,made,announcement on air,reject
+sent_0119,Mark,made,announcement at 5.20 pm GMT,reject
+sent_0119,Marisa,made,announcement,reject
+sent_0119,Drive Time,present,Mark,reject
+sent_0119,Drive Time,present,Marisa,reject
+sent_0119,staff,have,website,reject
+sent_0119,staff,have,stations website,reject
+sent_0119,website,is,closed 10pm GMT,reject
+sent_0119,stations,have,website closed shortly,reject
+sent_0119,stations,have,website closed shortly thereafter,reject
+sent_0119,stations,have,website closed 10pm GMT,reject
+sent_0125,Thomas,made,his debut,reject
+sent_0125,Thomas,made,debut in a 1-1 draw,reject
+sent_0125,Thomas,made,debut with Sheffield Wednesday,reject
+sent_0125,Thomas,made,debut at,reject
+sent_0125,Thomas,made,debut at Hillsborough,reject
+sent_0125,Arsenal,became,the Arsenal side,reject
+sent_0125,Arsenal,became,the side,reject
+sent_0125,Arsenal,became,the Arsenal,reject
+sent_0125,Arsenal,became,the,reject
+sent_0125,Arsenal,became,a,reject
+sent_0125,Arsenal,became,a side on 14 February 1987,reject
+sent_0125,Arsenal,became,a side with Sheffield Wednesday,reject
+sent_0125,Arsenal,became,a side at Hillsborough,reject
+sent_0125,Arsenal,became,a side on 14 February 1987 in,reject
+sent_0125,Arsenal,became,a side with Sheffield Wednesday at,reject
+sent_0125,Arsenal,became,a side at Hillsborough on,reject
+sent_0125,Arsenal,became,a side on 14 February 1987 at,reject
+sent_0125,Arsenal,became,a side in a 1-1 draw at,reject
+sent_0125,Arsenal,became,a side at Hillsborough in,reject
+sent_0125,Arsenal,became,a side on 14 February 1987 with,reject
+sent_0125,Arsenal,became,a side with Sheffield Wednesday in,reject
+sent_0125,Arsenal,became,a side on 14 February 1987 in a 1-1 draw,reject
+sent_0125,Arsenal,became,a side with Sheffield Wednesday at Hillsborough,reject
+sent_0125,Arsenal,became,a side on 14 February 1987 at Hillsborough,reject
+sent_0126,exhibition,of,British abstract art,reject
+sent_0128,Charles,leading,Shaftesbury,reject
+sent_0130,Two-year programs,are offered,in the divisions,lex_score_zero
+sent_0130,Two-year programs,are offered,of Games and Animation,reject
+sent_0130,Two-year programs,are offered,of Industrial Design,lex_score_zero
+sent_0130,Two-year programs,are offered,of Performing Arts,lex_score_zero
+sent_0130,Three-year programs,are offered,of Performing Arts,reject
+sent_0130,Two-year programs,are offered,of Information Communications,lex_score_zero
+sent_0130,Two-year programs,are offered,of Human Care,lex_score_zero
+sent_0130,Three-year programs,are offered,of Human Care,reject
+sent_0133,Alan,is,part of,reject
+sent_0134,African Americans,from,white Scouts,reject
+sent_0134,1914,is the year,in,reject
+sent_0134,African Americans,were segregated,by local councils,reject
+sent_0134,white Scouts,were not segregated,by local councils,reject
+sent_0135,Australian waters,was,attacked,reject
+sent_0140,Helsingin Bussiliikenne,was formed,Its bus operations,reject
+sent_0140,Helsingin Bussiliikenne,was formed,Suomen Turistiauto,reject
+sent_0146,father,was,start,reject
+sent_0146,father,was,a,unverified
+sent_0146,father,was,Hoboken,reject
+sent_0146,father,was,New Jersey,reject
+sent_0146,business,was,in,reject
+sent_0146,business,was,New Jersey,reject
+sent_0147,This building,has,undergone transformation in 1885,lex_score_zero
+sent_0147,This building,has,undergone transformation in,lex_score_zero
+sent_0147,This building,transformation,in 1885,reject
+sent_0148,El Camino High School,offers,recommended courses,reject
+sent_0149,Syria,regained,something,reject
+sent_0149,Syria,regained,Mount Hermon,reject
+sent_0149,October 6,1973,"is, date",reject
+sent_0149,October 6,1973,"is, day",reject
+sent_0149,October 6,1973,"is, first day",reject
+sent_0149,Yom Kippur War,is,event,reject
+sent_0149,First Battle of Mount Hermon,is,event,reject
+sent_0149,First Battle of Mount Hermon,occurred,"October 6, 1973",reject
+sent_0150,pilot,be,Japanese,reject
+sent_0150,pilot,have,pilot,reject
+sent_0150,April 2001,be,time,reject
+sent_0152,he,was,chosen of the Court of Queen's Bench,reject
+sent_0162,Video Concert Hall,ran,from,reject
+sent_0162,Video Concert Hall,ran,to,reject
+sent_0162,Video Concert Hall,ran,1981,reject
+sent_0162,Video Concert Hall,appeared,daytime,reject
+sent_0162,Video Concert Hall,appeared,one,reject
+sent_0162,Video Concert Hall,appeared,four,reject
+sent_0165,She,works,New York,reject
+sent_0166,Brumbies,won,47-38,reject
+sent_0166,Canberra Stadium,hosted,game,reject
+sent_0168,275,belongs to,Swiss Reformed Church,reject
+sent_0170,Smith-Waterman,is used for,finding,reject
+sent_0170,results,are,best,reject
+sent_0171,Tuqiri,named,Australian squad,reject
+sent_0173,Communist Party of India,have,linkages with,reject
+sent_0175,Peter Bywaters,offers,personal English as a second language tuition at his home,reject
+sent_0175,Peter Bywaters,offers,personal English as a second language tuition at his home in Brighton,reject
+sent_0175,Peter Bywaters,offers,English as a second language tuition at his home,reject
+sent_0175,Peter Bywaters,offers,English as a second language tuition at his home in Brighton,reject
+sent_0175,Peter Bywaters,offers,second language tuition at his home,reject
+sent_0175,Peter Bywaters,offers,second language tuition at his home in Brighton,reject
+sent_0175,Peter Bywaters,offers,language tuition at his home,reject
+sent_0175,Peter Bywaters,offers,language tuition at his home in Brighton,reject
+sent_0175,Peter Bywaters,offers,tuition at his home,reject
+sent_0175,Peter Bywaters,offers,tuition at his home in Brighton,reject
+sent_0176,"Word ""RAPE""",was,in center of board,reject
+sent_0177,Canal de l'Ourcq,built,Napoleonic era,reject
+sent_0179,Omega Beam,can,erase,reject
+sent_0181,Maduveya Vayasu,was played,in,reject
+sent_0182,Kabul,had,textile industry,reject
+sent_0184,organ,made,Arp Schnitger,reject
+sent_0186,Sidney Rice,caught,a pass,reject
+sent_0186,Russell Wilson,threw,to Sidney Rice,reject
+sent_0186,Russell Wilson,threw,a pass,reject
+sent_0186,New England Patriots,were beaten,by Sidney Rice,reject
+sent_0186,New England Patriots,were beaten,by Russell Wilson,reject
+sent_0186,New England Patriots,were beaten,by a 46-yard pass,reject
+sent_0186,New England Patriots,were beaten,by a pass,reject
+sent_0186,October 14,2012,"occurred, on",reject
+sent_0186,October 14,2012,is a date,reject
+sent_0188,Theatrical flourishes,and,established burlesque routines,reject
+sent_0188,Unique gimmicks,and,established burlesque routines,reject
+sent_0188,Theatrical flourishes,like,fan dance,reject
+sent_0188,Unique gimmicks,like,fan dance,reject
+sent_0189,Manchester Ship Canal,is over which,Latchford viaduct,reject
+sent_0191,The other racers,are,at all,reject
+sent_0192,colors,are,Brilliant Black Crystal Pearl Coat,reject
+sent_0192,colors,are,Bright Silver Metallic Clear Coat,reject
+sent_0192,colors,are,Flame Red Clear Coat,reject
+sent_0193,15 January 1999,is the date,on which,reject
+sent_0194,The school,was founded,by,reject
+sent_0194,The school,was founded,Peter Engelmann,reject
+sent_0194,The school,was founded,William Frankfurth,reject
+sent_0194,German-English Academy,was founded,by,reject
+sent_0194,German-English Academy,was founded,William Frankfurth,reject
+sent_0195,1613/14,is,the year,reject
+sent_0196,Greek and Roman pagans,scorned,a man,reject
+sent_0196,a man,feared,the gods,reject
+sent_0196,a man,was,seen as a slave,lex_score_zero
+sent_0198,Department,of,Government of Karnataka,reject
+sent_0199,cockpit,protected,engine,reject
+sent_0200,Bill Bryson,suggests,2010 book,reject
+sent_0202,Muhammad ibn Abu Bakr,praise,Shi'a,reject
+sent_0203,Future Vertical Lift prototype,SB-1 Defiant,is,reject
+sent_0203,Future Vertical Lift prototype,SB-1 Defiant,"is, called",reject
+sent_0204,Blanche,of,Burnham,reject
+sent_0204,Burnham,is,husband,reject
+sent_0204,Roderick,pioneered,Rhodesia,reject
+sent_0204,Martha Burnham Burleigh,of,Burnham,reject
+sent_0206,Madame Masque,has,mask,reject
+sent_0209,H 33258,has,cell-permeability,unverified
+sent_0209,H 33258,has,cell-permeability compared to,reject
+sent_0209,H 33258,has,cell-permeability compared with,reject
+sent_0209,H 33258,has,cell-permeability compared to Hoechst 33342,reject
+sent_0211,France,play,in the lead-up to the 2000 Rugby League World Cup,reject
+sent_0212,Old city,is located,Meaux.,reject
+sent_0213,This event,flooded,underpasses,reject
+sent_0213,This event,damaged,residential properties,lex_score_zero
+sent_0214,boss,is,regular enemies,reject
+sent_0216,Kesey,asked,Matthew Rick,reject
+sent_0216,Zane,is,son of Kesey,reject
+sent_0216,Matthew Rick,is,friend of Zane,reject
+sent_0216,Matthew Rick,is,also known as,reject
+sent_0217,Hauptmann,was,murdered by,reject
+sent_0218,Kickstarter,is used for,funding,reject
+sent_0218,50th anniversary Furthur Bus Trip,is,anniversary,reject
+sent_0218,Furthur Bus Trip,is,bus,reject
+sent_0220,tub,to,warm,reject
+sent_0222,He,was placed,in a Cuban,reject
+sent_0222,He,was placed,in a Cuban prison,reject
+sent_0224,Jones,was renamed,municipality,reject
+sent_0224,Philippine Autonomy Act of 1916,was,authored by William Jones,reject
+sent_0225,Peter Kharitonov,Deputy State Secretary of the State Chancellory,has,reject
+sent_0227,The Crybaby,is preceded by,The Bootlicker,reject
+sent_0227,The Maggot,is part of,trilogy,reject
+sent_0227,The Bootlicker,is part of,trilogy,reject
+sent_0229,12 April 1913,occurred on,opening of line,reject
+sent_0230,Antiochus,is,patient,reject
+sent_0231,November 1955,was,time of Haile Selassie's Silver Jubilee,reject
+sent_0231,Silver Jubilee,was,celebrated in November 1955,reject
+sent_0233,Comico,graphic novel,re-imagined,reject
+sent_0233,Comico,graphic novel,contains,reject
+sent_0235,The Nazis,conduct,Clemens Krauss,reject
+sent_0235,Clemens Krauss,conduct,a dress rehearsal,reject
+sent_0235,Strauss,hear,a dress rehearsal,reject
+sent_0235,Strauss,and an invited audience,"hear, a dress rehearsal",reject
+sent_0236,Byers,opposes,concept,reject
+sent_0239,He,be able to,"control, animal instincts",reject
+sent_0246,He,served,Scottish forces,reject
+sent_0246,The Netherlands,was,location,reject
+sent_0246,The Netherlands,was,place,reject
+sent_0247,2005 model,introduced,Pathfinder line,reject
+sent_0248,US 64,exits,Mutual Boulevard,reject
+sent_0248,Tar River,is crossed by,US 64,reject
+sent_0248,Mutual Boulevard,is exited by,US 64,reject
+sent_0248,Partial interchange,is located on,Tar River,reject
+sent_0248,East side,is part of,Princeville,reject
+sent_0250,Charles,is able to,declare,reject
+sent_0250,Charles,is,able,reject
+sent_0251,The Bush Administration,is,Administration,reject
+sent_0259,The National Party,held,the division from 1922 to 2004,reject
+sent_0259,The National Party,held,it from 1922 to 2004,reject
+sent_0260,he,worked,for,reject
+sent_0261,New Engleberg,was,monastery,reject
+sent_0264,2004,occurred,year,reject
+sent_0265,He,and,"friends, made, bombs",reject
+sent_0265,He,and,"friends, made, fun",reject
+sent_0265,He,and,"friends, made, bombs, for",reject
+sent_0265,He,and,"friends, made, bombs, for, fun",reject
+sent_0265,He,and,"friends, of, Murray",reject
+sent_0265,He,and,"friends, of, Utah",reject
+sent_0265,He,and,"friends, on, outskirts, of, Utah",reject
+sent_0265,He,and,"friends, were, said, to, have, made, for, fun",reject
+sent_0265,He,and,"friends, were, said, to, have, made, bombs, on, outskirts, of, Murray",reject
+sent_0265,He,and,"friends, were, said, to, have, made, bombs, on, outskirts, of, Utah",reject
+sent_0266,Montgomery Blair's Science,Math,"and Technology Academy, specializes in, Physical Science",reject
+sent_0266,Montgomery Blair's Science,Math,"and Technology Academy, specializes in, Engineering",reject
+sent_0266,Montgomery Blair's Science,Math,"and Technology Academy, specializes in, Mathematics",reject
+sent_0266,Montgomery Blair's Science,Math,"and Technology Academy, specializes in, Computer Networking",reject
+sent_0266,Montgomery Blair's Science,Math,"and Technology Academy, specializes in, Computer Programming",reject
+sent_0268,Butters,named,Drive,reject
+sent_0268,Drive,in,Phillip,reject
+sent_0268,Butters,named,honour,reject
+sent_0270,She,had,pneumonia,reject
+sent_0274,Spielberger,of,Psychology Department,reject
+sent_0274,University of South Florida,in,Tampa,reject
+sent_0274,University of South Florida,in,Florida,reject
+sent_0275,Hiester,son,Daniel,reject
+sent_0275,Hiester,son,Catherine Shuller Hiester,reject
+sent_0275,Daniel,immigrant,Germany,reject
+sent_0275,Catherine Shuller Hiester,immigrant,Germany,reject
+sent_0280,Zero,is,one who confronts X,reject
+sent_0282,DePauw University,awarded,degree in 1892,reject
+sent_0285,Leigh,was born in,European Union,reject
+sent_0285,Leigh,was born in,world,reject
+sent_0287,Vitoria,invasion,southern France,reject
+sent_0289,individuals,are,20,reject
+sent_0291,Voorhees,approved,2011,reject
+sent_0292,threats,do not,justify,reject
+sent_0292,threats,justify,a,reject
+sent_0293,Davis,collaborated,Leo Graham,reject
+sent_0293,Leo Graham,collaborated,Davis,reject
+sent_0295,They,married,in,reject
+sent_0303,Original sixth lap,be,race,reject
+sent_0303,Original sixth lap,be,beginning of,reject
+sent_0305,Taiwanese,is,version,reject
+sent_0308,Perceptible threat of resource depletion,exists,unknown.,reject
+sent_0308,Resource depletion,is a threat,unknown.,reject
+sent_0309,airlock,is,used by,reject
+sent_0309,airlock,is,entered,reject
+sent_0311,Muscles,travel,Japan,reject
+sent_0311,Muscles,catch,Yakuza group,reject
+sent_0311,Yakuza group,be,target,reject
+sent_0312,They,possess,eyelids,reject
+sent_0312,Eyeballs,need,licking,reject
+sent_0314,Tram services,withdraw,London,reject
+sent_0314,Tram services,replace,buses,reject
+sent_0315,ones,equals,one,reject
+sent_0317,Gimp,is adopted over,mainline gimp,reject
+sent_0318,Striking,is,done,reject
+sent_0319,entirety of the system,is,composed of systems,reject
+sent_0320,he,was,a public official,reject
+sent_0320,he,was,a politician,reject
+sent_0322,parties,is,disallowed,reject
+sent_0322,raising,is,disallowed,reject
+sent_0326,The Three Stooges,is,a film,reject
+sent_0326,Looney Tunes,was,compared to,reject
+sent_0326,Looney Tunes,is,a film,reject
+sent_0326,Home Alone,is,a film,reject
+sent_0327,Wild radish seeds,not suitable for,human consumption,reject
+sent_0328,resistance fighters,were,executed,reject
+sent_0328,resistance fighters,were,looted,reject
+sent_0329,WHTA,be,"managed by, Radio One",reject
+sent_0329,Ryan Cameron,be,a host,reject
+sent_0329,Ryan Cameron,be,morning show host,reject
+sent_0329,Radio One,be,a management,reject
+sent_0330,The Harvard Library,meets,plans,reject
+sent_0333,1 July 1955,was,the date,reject
+sent_0333,Order of St John,was,received by He,reject
+sent_0337,Lozano,was released,1993,reject
+sent_0340,Alexander,said,never,reject
+sent_0342,"""another fast and mobile carrier task force""","""tasked""","""Hazelwood""",reject
+sent_0342,"""Hazelwood""","""sailed""","""on 11 February""",reject
+sent_0342,"""16 and 17 February""","""is""","""a date range""",unverified
+sent_0342,"""Hazelwood""","""operated""","""on 16 and 17 February""",reject
+sent_0344,Germany,surrenders,Italy,reject
+sent_0345,They,believe,the Trinity,reject
+sent_0345,They,believe,accepted,reject
+sent_0345,They,believe,the vast majority,unverified
+sent_0345,They,believe,Christians,reject
+sent_0347,it,described as,about a German armada,reject
+sent_0348,All three,were,in California,reject
+sent_0349,Rabies vaccination,was,performed by Louis Pasteur,reject
+sent_0349,Rabies vaccination,was,conducted by Louis Pasteur,reject
+sent_0349,1886,was,the year of rabies vaccination,reject
+sent_0351,he,held,a regiment,reject
+sent_0351,a regiment,was,commanded by him,lex_score_zero
+sent_0351,a regiment,was,commanded,lex_score_zero
+sent_0352,the E Street Band,be,the object of plan,reject
+sent_0353,He,become,the commander of the U.S. Army's 1st Armored Division,reject
+sent_0353,the U.S. Army's 1st Armored Division,has,commander,reject
+sent_0356,They,held,for sculptors and painters,reject
+sent_0356,Thirty sculptors and painters,are a group,of people,reject
+sent_0357,Spain,with,Britain,reject
+sent_0361,Olaf,has,a house,reject
+sent_0363,He,accused,"Maroboduus, of, being, the",reject
+sent_0363,Maroboduus,of,"being, the",reject
+sent_0365,councils,were held,850,reject
+sent_0366,Acquisition,takes,hours.,reject
+sent_0367,The viewer,was,channel surfing,reject
+sent_0369,High Court of Australia,has,justice,unverified
+sent_0371,Salahuddin,won,as,reject
+sent_0372,him,be,in,reject
+sent_0372,him,be,a cell,reject
+sent_0372,him,be,floor,unverified
+sent_0372,Graner,take,him,reject
+sent_0372,him,be,handcuffed,reject
+sent_0373,Childers,book,most powerful contribution to the debate,reject
+sent_0373,Childers,book,remained for ten years,reject
+sent_0373,Andrew Boyle,noted,quote from Childers,reject
+sent_0374,Spider-Man Noir,has a relationship,Felicia,reject
+sent_0377,the French Community,vice-versa,the Walloon Region,reject
+sent_0378,Autostereoscopic images,is,type,lex_score_zero
+sent_0378,Stereoscopic images,is,type,reject
+sent_0378,Stereoscopic images,without,use,reject
+sent_0378,Special headgear,is,part,reject
+sent_0378,Glasses,is,part,reject
+sent_0378,Viewer,does,"not, use",reject
+sent_0379,Cathedral of St. Peter,has,city boundary,reject
+sent_0380,Stewart,died,after winning last major championship,reject
+sent_0380,Stewart,died,a few months after winning last major championship,reject
+sent_0381,Chris Hero,defended,honor,reject
+sent_0381,Candice LeRae,had honor,defended by Necro and Chris Hero,reject
+sent_0381,Candice LeRae,had honor,defended,reject
+sent_0381,Claudio Castagnoli,allied with,Human Tornado,reject
+sent_0381,Eddie Kingston,allied with,Human Tornado,reject
+sent_0389,Graner,was asked,by him,reject
+sent_0389,Graner,is a,prisoner,reject
+sent_0391,Ed,explain,what happened,reject
+sent_0394,He,became,mayor in September 2006,reject
+sent_0394,He,became,mayor at the age of 26,reject
+sent_0394,September 2006,is,time,reject
+sent_0394,26,is,age,reject
+sent_0396,TV8,changed,Southern Cross Network,reject
+sent_0396,Southern Cross Network,changed,TV8,reject
+sent_0397,cooling center,is,a,reject
+sent_0398,manifold,can be presented as,connected sum of more than one manifold,reject
+sent_0399,Court order,causes,printing to stop,reject
+sent_0399,Respublika,is a title,of printing,reject
+sent_0401,List,lists,turbomachinery,reject
+sent_0409,Hex,left,Cole,reject
+sent_0411,round ups,were,used,reject
+sent_0414,animal,shows,sociality traits,reject
+sent_0414,sociality traits,is,absence,reject
+sent_0415,1989,was,the year,reject
+sent_0416,Habitat for Humanity,formed,partnership,reject
+sent_0416,Habitat for Humanity,partner,ABS in the United States,reject
+sent_0419,Apartment buildings,were built,MAZ plant,reject
+sent_0419,Cinemas,were built,close proximity to MAZ plant,reject
+sent_0420,Implementations,use,service,reject
+sent_0422,Daniel O'Connell,wishes,appointment of Abraham Brewster as Law Adviser to the Lord Lieutenant of Ireland,reject
+sent_0422,Abraham Brewster,was,appointed,reject
+sent_0424,microbe,can survive,narrow pH range,reject
+sent_0424,narrow pH range,be,pH range,reject
+sent_0426,royal and administrative affairs,be,taken,reject
+sent_0430,Gypsy Horse,has,descriptive name,reject
+sent_0430,efforts,have,Gypsy Horse recognized,reject
+sent_0430,Romanichal community,is,outside of,reject
+sent_0431,Fernando Cabello,recording,process,reject
+sent_0431,Fernando Cabello,with,Lydia Iovanne,reject
+sent_0431,Eva Dalda,recording,process,reject
+sent_0431,Lydia Iovanne,recording,process,reject
+sent_0433,Villagers,killed,8,reject
+sent_0433,Tsunami,causes,People to be killed,reject
+sent_0435,Spirits,plan,exterminate humans,reject
+sent_0440,Bruce,was,Justice Lord counterpart,reject
+sent_0440,Bruce,was married to,Wonder Woman,reject
+sent_0440,Wonder Woman,was,Justice Lord counterpart,reject
+sent_0440,Justice Lord counterpart,killed,Bruce,reject
+sent_0442,practice,truly cancels,government debt,reject
+sent_0446,Carl,claim,first time to the rodeo,reject
+sent_0447,Certain fractional quantum computer,appear,to have the right,reject
+sent_0448,Mary,honoured,shrine,reject
+sent_0449,Gene,is,controlled by,reject
+sent_0451,Performance,be,10 ring,reject
+sent_0453,Manhattan,held,memorial service,reject
+sent_0453,Angel Orensanz Foundation,is,location,reject
+sent_0453,Angel Orensanz Foundation,is,location of memorial service,reject
+sent_0453,Norfolk Street,is,street,reject
+sent_0453,Norfolk Street,is,location,reject
+sent_0453,Norfolk Street,is,location of memorial service,reject
+sent_0458,Signal,is barely hearable,downtown area,unverified
+sent_0459,Second World War,occurred during,1939,reject
+sent_0460,services,run,Paddington,reject
+sent_0460,services,run,direct to Paddington,reject
+sent_0460,services,run,direct from Reading,reject
+sent_0460,morning rush hours,coincide with,services,reject
+sent_0461,ACT Rugby Union,was changed to,Brumbies Rugby,reject
+sent_0461,ACT Rugby Union,renamed to,Brumbies Rugby,reject
+sent_0461,ACT Rugby Union,renamed,Brumbies Rugby,reject
+sent_0463,Cluemaster,starts,plan,reject
+sent_0467,News,caused,cancellation,reject
+sent_0468,North Fork,has,head,reject
+sent_0468,head,of,North Fork,reject
+sent_0469,University,banned,smoking on its property,reject
+sent_0469,University,banned,smoking on its property including inside and outside buildings,reject
+sent_0469,University,banned,smoking in areas,reject
+sent_0469,University,banned,inside buildings,reject
+sent_0469,First semester of 2010,start,2010,reject
+sent_0469,Smoking,be,prohibited,reject
+sent_0469,Smoking areas,be,designated,reject
+sent_0469,Smoking areas,be,once designated,reject
+sent_0469,Smoking areas,be,areas,reject
+sent_0471,Gameplay,shoot,continually,reject
+sent_0471,Gameplay,reach,end,reject
+sent_0471,Gameplay,reach,level,reject
+sent_0471,Player,shoot,continually,reject
+sent_0471,Level,have,end,reject
+sent_0472,Gavin Hood,is,a,reject
+sent_0472,Gavin Hood,writing,Tsotsi,reject
+sent_0472,Tsotsi,is,an,reject
+sent_0474,Godzilla,caused,tectonic plates,reject
+sent_0474,Battra,caused,tectonic plates,reject
+sent_0477,Hapoel Lod,played,1960s,reject
+sent_0479,landing gear,is,MRO service offered by Hawker Pacific Aerospace,reject
+sent_0479,landing gear,is,MRO service offered for,reject
+sent_0481,Sargodha,is,team,reject
+sent_0481,1962-63,is,season,reject
+sent_0482,He,appeared,Brian Marwood,reject
+sent_0482,Brian Marwood,joined,Sheffield Wednesday,reject
+sent_0482,Sheffield Wednesday,was,joined from,reject
+sent_0484,He,is,surrounded by Neo Arcadians,reject
+sent_0488,He,guard,defile,reject
+sent_0489,He,lodged,with Henry Stephens,reject
+sent_0489,Henry Stephens,became,an ink magnate,reject
+sent_0490,He,played,The Pickwick Papers,reject
+sent_0490,The Pickwick Papers,was,adapted,reject
+sent_0491,Riding,of,Nickel Belt,reject
+sent_0501,BAE Systems,produces,land mines,reject
+sent_0501,BAE Systems,produces,cluster bombs,reject
+sent_0502,Gwen Andrews,provides,"same kind of interest as, Tess Trueheart",reject
+sent_0502,Tess Trueheart,is,"kind of interest provided by, Gwen Andrews",reject
+sent_0504,population,see,Nationals lose territory,reject
+sent_0504,population,see,Nationals reduced,reject
+sent_0505,vaccinees,are,vaccinees,reject
+sent_0507,second excitation pulse,is sent,prematurely,reject
+sent_0507,relaxation,is complete,not,reject
+sent_0508,Governor of Dyrrhachium,had,1005,reject
+sent_0508,Dyrrachium,was,port,reject
+sent_0508,Adriatic,was,location,reject
+sent_0511,"""The News and Courier""","""was bought""","""The Evening Post""",reject
+sent_0512,1954,is,year,reject
+sent_0512,year,is,1954,reject
+sent_0517,She,played the role of,Lesley Ann Warren's character,reject
+sent_0517,Lesley Ann Warren,is the character of,her,reject
+sent_0519,Kelsang Gyatso,made,pursuit compulsory,reject
+sent_0519,Geshe Studies Programme,became,target of outspokenness,reject
+sent_0519,pursuit,was,made compulsory,reject
+sent_0520,Brumbies,finished,table,reject
+sent_0520,Brumbies,finished,at,reject
+sent_0523,Theuriau,was unaware,scam websites' usage,reject
+sent_0525,2012,year of,America's Best City voting,reject
+sent_0526,Marcus Aemilius Scaurus,was a,defendant,reject
+sent_0526,54 BC,is the,year,reject
+sent_0528,"""God""",is,"part of, ""dieu et mon droit""",reject
+sent_0529,Samaritans,are,Shamerim,reject
+sent_0532,Edge Hill,was,a destination,reject
+sent_0532,Edge Hill,was,destination,reject
+sent_0532,Victoria Tunnel,was,route,reject
+sent_0532,October 2009,was,a time,reject
+sent_0532,October 2009,was,time,reject
+sent_0533,July 1942,was the month,she was posted,reject
+sent_0535,Michael Crichton,is,the author,reject
+sent_0536,Carl,go,France,reject
+sent_0538,St Paul's Cathedral,commented about,bomb,reject
+sent_0538,St Paul's Cathedral,hit,bomb,reject
+sent_0538,bomb,descended upon,Islington,reject
+sent_0539,Big East Conference,was,left by Boston College,reject
+sent_0539,Atlantic Coast Conference,was,joined by Boston College,reject
+sent_0539,July 1,2005,"was, the date",reject
+sent_0545,Europeans,caused,Cyprinidae to go extinct,reject
+sent_0546,Canning,had,member,reject
+sent_0546,George Leake,was,member of Oppositionists,reject
+sent_0548,1986,was,year,reject
+sent_0549,He,advocated,rights for African Americans,reject
+sent_0549,He,advocated,civil rights for African Americans,reject
+sent_0549,He,advocated,the effort,reject
+sent_0551,Anglican church,broke away from,Welsh Methodists,reject
+sent_0553,1976,is,a year,reject
+sent_0553,a major jump,is,scheduled for Knievel,reject
+sent_0554,man,transforms,a lowest World,reject
+sent_0556,Squadron,flew,A-4B Skyhawk,reject
+sent_0556,Squadron,flew,A-4L Skyhawk,reject
+sent_0557,his chances,having,50-50 chance,reject
+sent_0559,It,spoken,in Xiamen,reject
+sent_0560,it,be,passable,reject
+sent_0563,The triangulation station,was,at the junction,reject
+sent_0563,The triangulation station,was,of the trancontinental triangulation arc,reject
+sent_0565,PGCE,undertake,traditional method of teacher training,reject
+sent_0565,PGCE,is,traditional method of teacher training,reject
+sent_0566,Its cultivation,was introduced,Asian species,reject
+sent_0567,Fukuoka-Tokyo,has,route,reject
+sent_0567,Fukuoka-Tokyo,is,route,reject
+sent_0567,Tokyo,is,destination,reject
+sent_0567,Fukuoka,is,origin,reject
+sent_0568,James Arthur Hogue,is,a,reject
+sent_0569,Guy Gardner,brought,New Warworld,reject
+sent_0569,New Warworld,was,"next to, Anti-Monitor",reject
+sent_0569,Yellow Central Power Battery,was,"next to, Anti-Monitor",reject
+sent_0569,Anti-Monitor,was,"next to, New Warworld",reject
+sent_0569,Anti-Monitor,was,"next to, Yellow Central Power Battery",reject
+sent_0569,New Warworld,was,"contained, shield",reject
+sent_0569,Yellow Central Power Battery,was,"contained, shield",reject
+sent_0569,shield,was,"created, Green Lanterns",reject
+sent_0569,shield,was,"created, hundreds of Green Lanterns",reject
+sent_0569,Anti-Monitor,was,"not, killed",reject
+sent_0570,The Empire Strikes Back,is,a Star Wars sequel,reject
+sent_0570,The Empire Strikes Back,is,a 1980 film,reject
+sent_0576,Language A,supplants,Language B,reject
+sent_0576,Language A,abandons,Language A,reject
+sent_0577,Lemmy,believes,worked,reject
+sent_0577,Lemmy,believes,have worked,reject
+sent_0579,Changchun,is,location,reject
+sent_0579,Falun Gong,was,taught across China,reject
+sent_0581,Luke Robert Ravenstahl,served,from 2006 to 2014,reject
+sent_0581,Pittsburgh,was,governed by Luke Robert Ravenstahl,reject
+sent_0582,Females,had,median income,reject
+sent_0583,Males,had,"$36, 016",reject
+sent_0583,Females,had,"$32, 679",reject
+sent_0583,Females,had,median income,reject
+sent_0584,Larger ones,are excised,cancer,reject
+sent_0585,Hokkien,is,language,reject
+sent_0587,Soldiers,are,"15, 000",reject
+sent_0587,Soldiers,are,"36, 000",reject
+sent_0588,The country,embarked,on plans for modernization,reject
+sent_0589,Modernity,has been blended,tradition,reject
+sent_0589,Tradition,is,Buddhist ethos,reject
+sent_0589,Buddhist ethos,is,ethos,unverified
+sent_0593,Round Rock,be,Triple-A,reject
+sent_0593,Round Rock,be,location,reject
+sent_0594,UTV,made,announcement,reject
+sent_0594,UTV,close,station,reject
+sent_0594,station,be,planned,reject
+sent_0594,decision,close,station,reject
+sent_0594,decision,be,planned,reject
+sent_0596,Not everyone,trusts,Matau,unverified
+sent_0596,Vakama,is,fire-spitter,reject
+sent_0596,Not everyone,decides,"track, Matoran",reject
+sent_0597,The Church of Scotland,is,a church,reject
+sent_0600,Brutus,was requested,to give,reject
+sent_0600,16 June 1944,is,date,reject
+sent_0601,May 13,2010,"was the date when, Yost was named manager",reject
+sent_0602,a studio,was entered,a homeless man,reject
+sent_0602,XM,responded,by suspending,reject
+sent_0602,May 15,2007,"was the date, on which",reject
+sent_0603,Brown,contract,early,reject
+sent_0603,Brown,government,federal,reject
+sent_0606,Ballard,are,left,reject
+sent_0606,Sergeant Jericho,and,the other officers,reject
+sent_0607,Cotton Mather,called,"""Rogue's Island""",reject
+sent_0608,Hank McCoy,has,normal human physiology,reject
+sent_0610,Pakistan Chrome Mines Ltd.,is,in,reject
+sent_0612,Piffaro,performs,in,reject
+sent_0612,Piffaro,performs,Canada,reject
+sent_0615,The Playmaker tool,was used for,calling hot routes,reject
+sent_0616,RedHat,re-implemented,GCC 4.1,reject
+sent_0617,Reptiles,identified,four-toed earless skink,reject
+sent_0617,Reptiles,identified,bull skinks,reject
+sent_0618,Acoustic mimicry complexes,be,Batesian,reject
+sent_0619,Her,report,believe,reject
+sent_0620,"Robert Charles ""Jack"" Russell",known,his abilities as a cricket wicketkeeping coach,reject
+sent_0620,"Robert Charles ""Jack"" Russell",known,his abilities as a football goalkeeping coach,reject
+sent_0621,New Deal,is,during,reject
+sent_0622,cultures,are,great,reject
+sent_0623,Scarpetta,is,replaced,reject
+sent_0623,Scarpetta,is,"requested, by, Dr. Joel Marcus",reject
+sent_0623,Dr. Joel Marcus,is,"Scarpetta's, replacement",reject
+sent_0626,She,provided,episode,reject
+sent_0626,She,provided,DVD release,reject
+sent_0628,She,served,primarily,reject
+sent_0629,Deptford Dockyard,is,location,reject
+sent_0629,9 March 1724,is,date,reject
+sent_0631,1908,is the year,Richmond joined the competition,reject
+sent_0634,May 2013,was the time when,Spennymoor Town F.C. played,reject
+sent_0635,Abkhaz Soviet Socialist Republic,was,"associated with, Sukhum",reject
+sent_0635,Abkhaz Soviet Socialist Republic,was,"associated with, Georgian SSR",reject
+sent_0635,Abkhazian Autonomous Soviet Socialist Republic,was,"associated with, Sukhum",reject
+sent_0635,Sukhum,became,"capital of, Abkhazian Autonomous Soviet Socialist Republic",reject
+sent_0636,Superboy-Prime,flew,space,reject
+sent_0636,Superboy-Prime,flew,Anti-Monitor,reject
+sent_0636,Superboy-Prime,defeat,Anti-Monitor,reject
+sent_0638,NASCAR Craftsman Truck Series team,is,a team,reject
+sent_0639,plague,cause,Franco to lose many of her possessions,reject
+sent_0642,The Alarm,formed,in,reject
+sent_0642,The Alarm,formed,in North Wales,reject
+sent_0642,1981,is,year of formation,reject
+sent_0643,Sala d'Ercole,named,Hercules,reject
+sent_0644,Bureau of Alcohol,Tobacco,"Firearms and Explosives, formed, 1886",reject
+sent_0644,Bureau of Alcohol,Tobacco,"Firearms and Explosives, is, federal law enforcement organization",reject
+sent_0644,Bureau of Alcohol,Tobacco,"Firearms and Explosives, is, within",reject
+sent_0644,Bureau of Alcohol,Tobacco,"Firearms and Explosives, is, United States Department of Justice",reject
+sent_0645,Naxalite movement,location,West Bengal,reject
+sent_0645,Naxalite movement,date,August 2001,reject
+sent_0646,November 24,1967 shop fire,"caused, equipment to be burned",reject
+sent_0646,November 24,1967 shop fire,"occurred, 1967",reject
+sent_0648,Main Street Tunnel,carrying,Highway 7146,reject
+sent_0648,Main Street Tunnel,under,Welland Canal,reject
+sent_0648,Welland Canal,under which,Main Street Tunnel,reject
+sent_0651,The Persian contingent,guard,the defile,reject
+sent_0652,Rev. William Alfred Quayle,honored,Baker University,reject
+sent_0653,The River Stour Trust,is located,Cornard Lock,reject
+sent_0654,Provisional Irish Republican Army,was killed,by SAS,reject
+sent_0654,Irish National Liberation Army,was killed,by SAS,reject
+sent_0655,Steinbrenner family,added,Monument Park,reject
+sent_0655,September 20,2010,"date, unknown",reject
+sent_0669,The Prefecture Apostolic of Peng-yang,was erected,17 March 1929,reject
+sent_0670,Ostrov,based on,food industry,reject
+sent_0670,Ostrov,based on,electronic industry,reject
+sent_0670,Ostrov,based on,textile industry,reject
+sent_0673,Philosophical Society of Australasia,established,1821,reject
+sent_0676,1st Armored,fail,deploy,reject
+sent_0676,1st Armored,deploy,single entity,reject
+sent_0676,1st Armored,deploy,Tunisia,reject
+sent_0678,Royal Couple,lived,Sweden,reject
+sent_0680,The first library in Huntington Beach,has,Central,reject
+sent_0680,The first library in Huntington Beach,has,Oak View,reject
+sent_0680,The first library in Huntington Beach,has,Helen Murphy,reject
+sent_0689,The permanent members,are,from the Faculty of Arts and Sciences,reject
+sent_0689,The permanent members,are,from Harvard Business School,reject
+sent_0689,The permanent members,are,from Harvard Law School,reject
+sent_0689,The permanent members,are,from Harvard Medical School,reject
+sent_0692,The head of the South Fork,has,rapids,reject
+sent_0692,The South Fork,has,head,reject
+sent_0692,The South Fork,has,rapids,reject
+sent_0696,The Temple,destroy,the `` Korban Tamid '' and the `` Nesach Hayayin ''.,reject
+sent_0697,Pierre Dumas,be,the race doctor,reject
+sent_0697,Pierre Dumas,be,drinking wine,reject
+sent_0697,Pierre Dumas,be,taking aspirin,reject
+sent_0698,November 1995,was the time,when former US President George H. W. Bush stayed aboard,reject
+sent_0699,Jane Waterleigh,named,Barrie,reject
+sent_0700,Governor-General,had,role,reject
+sent_0701,The site,has,one area,reject
+sent_0701,The site,has,a Grotto folly,reject
+sent_0701,The site,has,another Grotto folly,reject
+sent_0702,Dartmouth students,attend,a dinner,reject
+sent_0703,The station,has,a ticket office area,reject
+sent_0704,Stations,were renamed,Midsomer Norton Upper,reject
+sent_0704,British Railways,renamed,Midsomer Norton Upper,reject
+sent_0704,Midsomer Norton Upper,was,renamed,reject
+sent_0705,solid lump,is,a lump,reject
+sent_0706,Amazon.com,is,a market,reject
+sent_0706,Amazon.com,has,a position,reject
+sent_0706,their actions,violate,antitrust law,reject
+sent_0708,The town,was served by,the Bristol and North Somerset Railway,reject
+sent_0708,The station,was on,the Somerset and Dorset Railway,reject
+sent_0708,The station,closed,1966,reject
+sent_0708,The second station,was in,the valley,reject
+sent_0710,video,be,first,reject
+sent_0713,mix,contains,vinegar,reject
+sent_0713,mix,contains,sugar,reject
+sent_0713,mix,contains,celery,reject
+sent_0716,Children under the age of 18 living with them,were,30.1% of households,reject
+sent_0716,Married couples living together,were,49.7% of households,reject
+sent_0716,A female householder with no husband present,were,11.9% of households,reject
+sent_0716,Non-families,were,36.4% of households,reject
+sent_0717,Married couples living together,were,56.30 % of households,reject
+sent_0717,A female householder with no husband present,were,7.50 % of households,reject
+sent_0717,Non-families,were,32.50 % of households,reject
+sent_0718,Married couples living together,were,31.7% of households,reject
+sent_0718,Female householder with no husband present,were,31.5% of households,reject
+sent_0720,These,have,AnyKey moniker,reject
+sent_0725,They,beat,Azusa Pacific,reject
+sent_0725,Grand View,lose,3-0,reject
+sent_0725,Azusa Pacific,draw,0-0,reject
+sent_0726,Lady Shiva,be,assassin,reject
+sent_0731,Calvin,was,promoted,reject
+sent_0733,Welsh language,was,language,reject
+sent_0735,This line,extended,to Hawthorn Road,reject
+sent_0739,Tobias,is,Lindsay's husband,reject
+sent_0739,Tobias,is,Maeby's father,reject
+sent_0739,Michael,lives with,Lindsay,reject
+sent_0739,Michael,lives with,Tobias,reject
+sent_0739,Michael,lives with,Maeby,reject
+sent_0739,Lindsay,lives with,Michael,reject
+sent_0739,Tobias,lives with,Michael,reject
+sent_0742,North Mall,located,at the end,reject
+sent_0743,"""R-11""","""was""","""in Key West, Florida""",reject
+sent_0744,Trumbull,was credited,as,reject
+sent_0744,Trumbull,being,special-effects creator,reject
+sent_0744,Trumbull,being,sole,reject
+sent_0744,Trumbull,credited,for,reject
+sent_0744,2001,being,film,reject
+sent_0745,Ladd,has,child,reject
+sent_0745,Laura Dern,is,child of,reject
+sent_0745,Laura Dern,is,daughter of,reject
+sent_0745,Bruce Dern,is,husband of,reject
+sent_0746,J.B. Salsberg,member,Labor-Progressive Party,reject
+sent_0752,Wakeboarding,is practiced by,men,reject
+sent_0752,Wakeboarding,is practiced by,women,reject
+sent_0753,Watson,served,as,reject
+sent_0753,Watson,elected,his caucus,reject
+sent_0756,16 March 1901,is,date,reject
+sent_0757,the room,contained,no one,reject
+sent_0762,Russia,was transformed,an absolute monarchy,reject
+sent_0766,7 June 1946,was the date of,Greenfish's commissioning,reject
+sent_0768,Le Griffon,shipwreck,Great Lakes,reject
+sent_0768,Great Lakes,shipwreck,Le Griffon,reject
+sent_0771,he,did,not teach,reject
+sent_0771,he,did,not have a church position,reject
+sent_0771,he,was,a concert organist,reject
+sent_0772,Scott,told,a casting director,reject
+sent_0772,he,met,Scott,reject
+sent_0772,a casting director,was casting,a cartoon,reject
+sent_0774,Hauptmann,was,in,reject
+sent_0774,Condon,went,to,reject

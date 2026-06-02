@@ -1,0 +1,20 @@
+{
+  "n_input": 5459,
+  "n_ok": 3810,
+  "n_dropped": 1649,
+  "edit_type_counts": {
+    "modality_preserved": 347,
+    "object_canonicalized": 517,
+    "negation_preserved": 434,
+    "subject_canonicalized": 55,
+    "predicate_normalized": 4
+  },
+  "drop_reason_counts": {
+    "object_not_grounded": 211,
+    "predicate_not_grounded": 1225,
+    "object_ungroundable": 203,
+    "subject_not_grounded": 6,
+    "subject_ungroundable": 4
+  },
+  "elapsed_s": 2.08
+}

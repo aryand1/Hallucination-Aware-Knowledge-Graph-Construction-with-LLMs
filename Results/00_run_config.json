@@ -1,0 +1,42 @@
+{
+  "run_id": "20260417_184809",
+  "smoke_test": false,
+  "timestamp": "2026-04-17T18:48:09.868319",
+  "llm_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "nli_model": "roberta-large-mnli",
+  "sbert_model": "all-mpnet-base-v2",
+  "extraction": {
+    "temperature": 0.0,
+    "max_tokens": 600,
+    "do_sample": false,
+    "system_prompt": "You are an expert in knowledge graph construction. Respond ONLY with the requested structured data. No explanations.",
+    "user_template": "From the following sentence:\n'{sentence}'\n\nIdentify All Possible triples representing factual relationships in the format [Subject, Predicate, Object]. Be exhaustive \u2014 extract every relation you can find, including implicit ones. Return as many triples as possible.\n\nOutput ONLY the triples, following this exact structure:\nTriples:\n- [Subject, Predicate, Object]\n- [Subject, Predicate, Object]\n\nConstraints:\n- Extract ONLY factual relations stated in the sentence (about entities/events), not about what the paper/review does.\n- Do NOT extract meta-discourse relations such as: \"this review discusses/presents/covers/attempts to...\"\n- Do NOT output any triple where subject or object is \"unknown\", \"none\", \"n/a\", or empty.\n- Predicates must be verbs or verb phrases (e.g., \"contains\", \"causes\", \"prevents\", \"is used for\"), not bare nouns.\n- Predicate must NOT be only \"is/are/was/were\".\n- Object must be a concrete noun phrase/entity mentioned in the sentence, not a verb phrase.\n- Each triple must be complete and meaningful as (Subject, Relation, Object).\n- If no valid factual triples exist, output exactly:\nTriples:\n"
+  },
+  "repair": {
+    "r1_token_weight": 0.65,
+    "r1_seq_weight": 0.35,
+    "r1_min_score": 0.3
+  },
+  "nli": {
+    "entail_floor": 0.5,
+    "entail_margin_neu": 0.1,
+    "entail_margin_con": 0.2,
+    "reject_floor": 0.75,
+    "reject_margin_neu": 0.1,
+    "reject_margin_ent": 0.2
+  },
+  "retrieval": {
+    "weak_lex_threshold": 2,
+    "weak_nli_threshold": 0.9,
+    "bm25_k": 5,
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75
+  },
+  "evaluation": {
+    "tier2_threshold": 0.55,
+    "tier3_threshold": 0.45,
+    "bootstrap_n_resamples": 10000,
+    "bootstrap_ci_level": 0.95,
+    "bootstrap_seed": 42
+  }
+}

@@ -1,0 +1,6 @@
+edit_type,total,accepted,accept_rate
+modality_preserved,347,264,0.761
+negation_preserved,434,76,0.175
+object_canonicalized,517,308,0.596
+predicate_normalized,4,0,0.0
+subject_canonicalized,55,45,0.818

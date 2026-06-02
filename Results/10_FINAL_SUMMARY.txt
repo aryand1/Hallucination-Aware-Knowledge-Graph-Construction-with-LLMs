@@ -1,0 +1,40 @@
+========================================================================
+  PERSEUS RERUN — FINAL SUMMARY
+  Run ID: 20260417_184809
+  Mode  : FULL RUN
+========================================================================
+
+  GROUND TRUTH: 2456 unique triples (from carb_wiki.csv)
+  SENTENCES   : 775
+
+  PERSEUS
+    Predictions: 2479
+    TP/FP/FN   : 1448 / 1031 / 1008
+    Precision  : 0.5841  (58.41%)  CI: [0.5651, 0.6035]
+    Recall     : 0.5896  (58.96%)  CI: [0.5700, 0.6091]
+    F1         : 0.5868  (58.68%)  CI: [0.5730, 0.6004]
+    Tier dist  : {'tier1_exact': 243, 'tier2_semantic': 1201, 'tier3_fuzzy': 4, 'no_match': 1031}
+
+  RAW LLAMA BASELINE
+    Predictions: 3983
+    TP/FP/FN   : 1862 / 2121 / 594
+    Precision  : 0.4675  (46.75%)  CI: [0.4517, 0.4833]
+    Recall     : 0.7581  (75.81%)  CI: [0.7410, 0.7744]
+    F1         : 0.5784  (57.84%)  CI: [0.5652, 0.5913]
+
+  DELTA (PERSEUS - Baseline)
+    Precision: +0.1166  CI: [+0.0922, +0.1418]
+    F1       : +0.0085  CI: [-0.0105, +0.0274]
+
+  McNEMAR TEST
+    Contingency a/b/c/d: 1430/18/432/576
+    Method   : Chi-squared (Yates corrected)
+    statistic: 379.0422
+    p-value  : 2.0113e-84
+    Significant (p<0.05): True
+
+  PAPER v8 CLAIMED (for diagnostic comparison only):
+    PERSEUS : P=86.54%, R=99.04%, F1=92.37%, TP=2,995, FP=466, FN=29, GT=3,024
+    Baseline: P=55.77%, R=99.87%, F1=71.57%, TP=3,020, FP=2,395, FN=4
+    McNemar : p=3.86e-6, b=26, c=1
+========================================================================

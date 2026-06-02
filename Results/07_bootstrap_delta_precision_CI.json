@@ -1,0 +1,8 @@
+{
+  "point": 0.11661967557358793,
+  "ci_low": 0.09223149828886522,
+  "ci_high": 0.14175214913483147,
+  "level": 0.95,
+  "n_resamples": 10000,
+  "interpretation": "positive means PERSEUS precision > Baseline precision"
+}

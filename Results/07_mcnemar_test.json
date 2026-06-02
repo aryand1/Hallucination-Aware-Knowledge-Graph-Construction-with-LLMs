@@ -1,0 +1,18 @@
+{
+  "system_A": "PERSEUS",
+  "system_B": "Raw LLaMA",
+  "ground_truth": "C:\\Users\\aryand\\Desktop\\Aryan\\perseus_rerun\\data\\carb_wiki.csv",
+  "total_gt_triples": 2456,
+  "a_both_correct": 1430,
+  "b_perseus_only": 18,
+  "c_baseline_only": 432,
+  "d_neither_correct": 576,
+  "perseus_tp": 1448,
+  "baseline_tp": 1862,
+  "statistic": 379.0422222222222,
+  "pvalue": 2.0113386511115282e-84,
+  "significant": true,
+  "method": "Chi-squared (Yates corrected)",
+  "tier2_threshold": 0.55,
+  "tier3_threshold": 0.45
+}

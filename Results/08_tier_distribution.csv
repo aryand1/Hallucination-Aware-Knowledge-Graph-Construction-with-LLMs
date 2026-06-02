@@ -1,0 +1,5 @@
+tier,count,pct_of_preds
+tier2_semantic,1201,48.45
+no_match,1031,41.59
+tier1_exact,243,9.8
+tier3_fuzzy,4,0.16

@@ -1,0 +1,1329 @@
+predicate,preds,TP,precision
+is,180,0,0.0
+was,149,0,0.0
+be,57,0,0.0
+became,53,20,0.377
+are,51,0,0.0
+were,45,0,0.0
+has,42,0,0.0
+had,35,0,0.0
+have,35,0,0.0
+won,29,14,0.483
+provides,25,10,0.4
+held,24,23,0.958
+made,24,7,0.292
+played,24,17,0.708
+appear,19,2,0.105
+are offered,18,0,0.0
+was requested,17,0,0.0
+advocated,15,4,0.267
+joined,13,9,0.692
+performs,13,11,0.846
+located,12,11,0.917
+were held,12,0,0.0
+took,12,4,0.333
+includes,11,7,0.636
+include,11,10,0.909
+published,11,10,0.909
+banned,11,2,0.182
+might to regulate,11,0,0.0
+began,10,8,0.8
+can is,10,0,0.0
+play,10,7,0.7
+served,10,4,0.4
+could said,10,1,0.1
+speak,9,7,0.778
+used,9,5,0.556
+occupied,9,4,0.444
+introduced,9,6,0.667
+left,9,7,0.778
+accused,9,2,0.222
+gives,9,9,1.0
+launched,8,3,0.375
+produced,8,6,0.75
+died,8,4,0.5
+contains,8,8,1.0
+was chosen,8,0,0.0
+went,8,4,0.5
+born,8,5,0.625
+formed,8,6,0.75
+can has,8,0,0.0
+killed,7,4,0.571
+refers to,7,2,0.286
+have been included,7,0,0.0
+released,7,5,0.714
+offers,7,2,0.286
+was released,7,0,0.0
+built,7,7,1.0
+beat,7,4,0.571
+came in,7,7,1.0
+describes,7,5,0.714
+can have,7,0,0.0
+can be,7,0,0.0
+returned,6,5,0.833
+become,6,4,0.667
+ran,6,4,0.667
+could believed,6,1,0.167
+was founded,6,0,0.0
+would,6,3,0.5
+math,6,2,0.333
+appeared,6,3,0.5
+can be used for,6,5,0.833
+book,6,2,0.333
+can record,6,2,0.333
+dedicated,6,6,1.0
+no were,6,0,0.0
+plays,5,3,0.6
+gained,5,1,0.2
+named,5,2,0.4
+worked,5,3,0.6
+toured,5,1,0.2
+sought,5,3,0.6
+can turning turtle,5,1,0.2
+started,5,3,0.6
+were informed,5,0,0.0
+met,5,4,0.8
+hosts,5,5,1.0
+known,5,4,0.8
+combined,5,4,0.8
+included,5,1,0.2
+helped,5,1,0.2
+awarded,5,3,0.6
+attend,5,4,0.8
+broadcast,5,3,0.6
+not believe,5,2,0.4
+was held,5,0,0.0
+was in,5,0,0.0
+can takes,5,2,0.4
+later,5,2,0.4
+give,5,2,0.4
+lodged,5,4,0.8
+concluded,5,2,0.4
+favor,5,3,0.6
+is located near,5,0,0.0
+go,5,1,0.2
+make,5,3,0.6
+led to,4,4,1.0
+ended,4,3,0.75
+occurs,4,3,0.75
+is portrayed,4,0,0.0
+may be,4,0,0.0
+founded,4,6,1.5
+closed,4,3,0.75
+operational,4,1,0.25
+too expensive,4,0,0.0
+ranked,4,3,0.75
+may occurred,4,1,0.25
+found,4,3,0.75
+proposed,4,1,0.25
+not was,4,0,0.0
+accept,4,2,0.5
+sponsored,4,2,0.5
+acquired,4,1,0.25
+were distributed,4,0,0.0
+part of,4,6,1.5
+featured,4,2,0.5
+caught,4,2,0.5
+established,4,2,0.5
+comprises,4,4,1.0
+believe,4,2,0.5
+authored,4,3,0.75
+chose,4,2,0.5
+could conduct,4,1,0.25
+uses,4,2,0.5
+be able to,4,0,0.0
+was appointed,4,0,0.0
+moved,4,2,0.5
+approved,4,2,0.5
+help,4,2,0.5
+controlled,4,4,1.0
+sent,4,5,1.25
+supervise,4,4,1.0
+against,4,4,1.0
+described as,4,3,0.75
+live below the poverty line,4,3,0.75
+were renovated,4,0,0.0
+told,4,4,1.0
+caused,4,1,0.25
+facilitates,4,1,0.25
+control,4,1,0.25
+represented,4,3,0.75
+promote,4,3,0.75
+depended,4,3,0.75
+are removed,4,0,0.0
+might has,4,0,0.0
+was born,4,0,0.0
+merged,4,1,0.25
+lived,4,3,0.75
+was extended,4,0,0.0
+continued,4,2,0.5
+may requires,4,2,0.5
+taught,3,1,0.333
+lost,3,3,1.0
+captured,3,1,0.333
+addressed,3,1,0.333
+flows along,3,1,0.333
+is located at,3,0,0.0
+does,3,2,0.667
+reviewed,3,2,0.667
+is responsible for,3,0,0.0
+developed,3,1,0.333
+plans,3,3,1.0
+called,3,4,1.333
+served as,3,2,0.667
+were proven,3,0,0.0
+is located,3,0,0.0
+point,3,2,0.667
+received,3,1,0.333
+produces,3,1,0.333
+foster,3,1,0.333
+suggests,3,0,0.0
+served by,3,6,2.0
+change,3,1,0.333
+wrote,3,1,0.333
+target,3,2,0.667
+suffered,3,3,1.0
+fires,3,2,0.667
+was played,3,0,0.0
+awoke,3,2,0.667
+hit,3,1,0.333
+may was,3,0,0.0
+asked,3,2,0.667
+announced,3,2,0.667
+is part of,3,0,0.0
+opened,3,4,1.333
+known for,3,3,1.0
+select,3,1,0.333
+studied,3,3,1.0
+pulled,3,3,1.0
+has been,3,0,0.0
+shares,3,2,0.667
+operate,3,2,0.667
+proposes,3,2,0.667
+were born,3,0,0.0
+consisted of,3,3,1.0
+born in,3,4,1.333
+recorded,3,3,1.0
+remained,3,3,1.0
+depending,3,1,0.333
+influenced,3,1,0.333
+must,3,1,0.333
+required,3,2,0.667
+in charge of,3,3,1.0
+seems,3,1,0.333
+can be classified using,3,3,1.0
+delivered,3,1,0.333
+are equipped,3,0,0.0
+plan,3,2,0.667
+surrounding villages,3,1,0.333
+was released on,3,0,0.0
+can,3,12,4.0
+happens upon,3,1,0.333
+were thoroughly renovated,3,0,0.0
+matriculated,3,1,0.333
+could asked,3,0,0.0
+were built,3,0,0.0
+requires,3,1,0.333
+assisting,3,3,1.0
+encourages,3,2,0.667
+no passing,3,1,0.333
+can are,3,0,0.0
+is barely hearable,3,0,0.0
+run,3,2,0.667
+dons,3,2,0.667
+reach,3,1,0.333
+can track,3,1,0.333
+can detect,3,1,0.333
+defines,3,1,0.333
+confirmed,3,3,1.0
+was directed by,3,0,0.0
+finished,3,1,0.333
+will be revealed,3,1,0.333
+inhabitants,3,1,0.333
+transforms,3,1,0.333
+could not afford,3,2,0.667
+appeared as,3,2,0.667
+may taught,3,1,0.333
+are excised,3,0,0.0
+likely produce,3,1,0.333
+likely have,3,0,0.0
+try,3,3,1.0
+identified,3,3,1.0
+was taken,3,0,0.0
+could be,3,0,0.0
+affects,3,3,1.0
+associated with,3,2,0.667
+moves,3,2,0.667
+tobacco,3,1,0.333
+meeting,3,0,0.0
+located in,3,1,0.333
+runs,3,1,0.333
+created,3,4,1.333
+occurred,3,1,0.333
+recall,3,2,0.667
+constructed,3,1,0.333
+should be,3,0,0.0
+conspired,3,2,0.667
+was served by,3,0,0.0
+supplied,3,2,0.667
+can is compatible with,3,0,0.0
+extended,3,4,1.333
+asks,3,1,0.333
+elected,3,1,0.333
+drawing closer,3,2,0.667
+topped,3,1,0.333
+switched,2,2,1.0
+obtained,2,1,0.5
+parallel,2,2,1.0
+diverge,2,1,0.5
+are adapted to,2,0,0.0
+was awarded,2,0,0.0
+known as,2,5,2.5
+has base,2,0,0.0
+can be clarified,2,1,0.5
+stayed,2,2,1.0
+may raced to,2,2,1.0
+observed,2,1,0.5
+attempted,2,1,0.5
+encountered,2,1,0.5
+is home to,2,0,0.0
+desires,2,1,0.5
+connected,2,1,0.5
+made up of,2,1,0.5
+may became,2,1,0.5
+may contain,2,1,0.5
+appearing,2,2,1.0
+could was,2,0,0.0
+deemed,2,1,0.5
+worked as,2,2,1.0
+was renamed,2,0,0.0
+typically,2,2,1.0
+secures,2,2,1.0
+earned,2,2,1.0
+unable see,2,1,0.5
+has nature,2,0,0.0
+were mobilized,2,0,0.0
+were recalled,2,0,0.0
+is known as,2,0,0.0
+can jump,2,1,0.5
+could began,2,0,0.0
+features,2,2,1.0
+was erected,2,0,0.0
+erected,2,3,1.5
+cuts,2,1,0.5
+is cut,2,0,0.0
+relies,2,1,0.5
+do not,2,1,0.5
+is not,2,0,0.0
+removes,2,1,0.5
+are set up,2,0,0.0
+were crushed,2,0,0.0
+is served with,2,0,0.0
+suggests takes,2,1,0.5
+gave,2,2,1.0
+might accelerates,2,0,0.0
+were merged with,2,0,0.0
+never,2,3,1.5
+was laid to rest,2,0,0.0
+was reunited with,2,0,0.0
+illustrates,2,1,0.5
+ought to achieve,2,1,0.5
+1973,2,0,0.0
+supports,2,1,0.5
+is working,2,0,0.0
+is for,2,0,0.0
+were played,2,0,0.0
+came,2,1,0.5
+like,2,0,0.0
+do not influence,2,1,0.5
+then,2,1,0.5
+might saw,2,2,1.0
+might trembled,2,1,0.5
+may contains,2,0,0.0
+work,2,1,0.5
+survived,2,2,1.0
+had been,2,0,0.0
+ago,2,0,0.0
+are kept,2,0,0.0
+flooded,2,2,1.0
+damaged,2,2,1.0
+confronts,2,2,1.0
+leader,2,1,0.5
+along with,2,1,0.5
+painted,2,2,1.0
+was sent,2,0,0.0
+was the year,2,0,0.0
+anodic oxidation,2,1,0.5
+suspects,2,1,0.5
+contribute,2,2,1.0
+from the stars,2,1,0.5
+made of,2,1,0.5
+could hear,2,1,0.5
+could and an invited audience,2,2,1.0
+was sworn,2,0,0.0
+operate under,2,2,1.0
+carries,2,1,0.5
+off,2,2,1.0
+come,2,1,0.5
+raise,2,1,0.5
+held it,2,0,0.0
+has joined,2,0,0.0
+makes,2,1,0.5
+were administered by,2,0,0.0
+coincide,2,0,0.0
+view,2,1,0.5
+was born in,2,0,0.0
+collaborated,2,2,1.0
+results in,2,2,1.0
+based on,2,0,0.0
+offered,2,3,1.5
+withdraw,2,1,0.5
+concerns,2,1,0.5
+without has,2,0,0.0
+has executed,2,0,0.0
+referred to as,2,1,0.5
+stands,2,1,0.5
+followed,2,0,0.0
+can be used as,2,2,1.0
+were hit by,2,0,0.0
+might not in,2,1,0.5
+holds,2,2,1.0
+noted,2,1,0.5
+has a relationship with,2,0,0.0
+assigned,2,1,0.5
+remains,2,0,0.0
+came into residence,2,1,0.5
+was united with,2,0,0.0
+was part of,2,0,0.0
+could was asked,2,1,0.5
+was told,2,0,0.0
+network,2,1,0.5
+set up,2,1,0.5
+may use,2,1,0.5
+improves,2,1,0.5
+not is,2,0,0.0
+accompanied,2,1,0.5
+was published,2,0,0.0
+escorted,2,1,0.5
+can use,2,1,0.5
+insisted,2,1,0.5
+can not survive,2,1,0.5
+had to be dredged,2,0,0.0
+take,2,1,0.5
+no are reasonably calculated,2,1,0.5
+can perform,2,1,0.5
+can do,2,0,0.0
+filed,2,1,0.5
+can produce,2,1,0.5
+often,2,1,0.5
+no connecting,2,2,1.0
+increased,2,2,1.0
+renamed,2,3,1.5
+changed to,2,1,0.5
+had a new name,2,0,0.0
+brought,2,2,1.0
+shoot,2,1,0.5
+best known for,2,2,1.0
+markets,2,2,1.0
+battled,2,2,1.0
+was buried,2,0,0.0
+was reprieved,2,0,0.0
+was created by,2,0,0.0
+is quenched by,2,0,0.0
+no produces,2,0,0.0
+no stated,2,1,0.5
+bears resemblance to,2,1,0.5
+has partner,2,0,0.0
+lost control of,2,1,0.5
+crashed into,2,2,1.0
+lose,2,0,0.0
+published with,2,1,0.5
+discovered,2,1,0.5
+directed,2,1,0.5
+was unaware,2,0,0.0
+voted,2,1,0.5
+bore testimony,2,1,0.5
+can mean,2,2,1.0
+was a,2,0,0.0
+was the month,2,0,0.0
+bring,2,1,0.5
+occupies,2,0,0.0
+arrives,2,1,0.5
+replaces,2,1,0.5
+not,2,8,4.0
+remembered,2,2,1.0
+was introduced,2,0,0.0
+entered,2,1,0.5
+led,2,2,1.0
+graduated,2,2,1.0
+double majored in,2,1,0.5
+abandon,2,1,0.5
+lampooned,2,1,0.5
+versus,2,0,0.0
+have ancestors,2,0,0.0
+likely taking into account,2,1,0.5
+likely are,2,0,0.0
+embarked,2,2,1.0
+split,2,1,0.5
+not decides,2,1,0.5
+could is part of,2,0,0.0
+referred to,2,2,1.0
+to benefit,2,1,0.5
+can have been planted,2,1,0.5
+signed,2,1,0.5
+could precedes,2,1,0.5
+could call,2,1,0.5
+re implemented,2,1,0.5
+provided,2,1,0.5
+alongside,2,1,0.5
+could specify,2,0,0.0
+lasted,2,2,1.0
+was raised,2,0,0.0
+are known as,2,0,0.0
+organized,2,1,0.5
+members,2,2,1.0
+without was,2,0,0.0
+was killed,2,0,0.0
+added,2,1,0.5
+call,2,0,0.0
+sometimes called,2,2,1.0
+was promoted with,2,0,0.0
+was dammed,2,0,0.0
+was renamed as,2,0,0.0
+can be found,2,1,0.5
+would be added,2,1,0.5
+would be decided,2,1,0.5
+honour,2,1,0.5
+rotates,2,2,1.0
+may has,2,0,0.0
+may reserves,2,0,0.0
+is held in,2,0,0.0
+can be reprocessed,2,1,0.5
+can be strained,2,1,0.5
+shouting,2,2,1.0
+starred,2,1,0.5
+weaken,2,1,0.5
+is produced,2,0,0.0
+was on,2,0,0.0
+put,2,3,1.5
+allow,2,2,1.0
+demanded,2,1,0.5
+credited,2,1,0.5
+intersects,2,1,0.5
+different,2,2,1.0
+compete,2,2,1.0
+is practiced at,2,0,0.0
+may was surprised by,2,1,0.5
+topping,2,1,0.5
+hunters,2,0,0.0
+was casting,2,0,0.0
+could shows,1,0,0.0
+could indicates,1,0,0.0
+can carry,1,1,1.0
+midland and scottish railway company,1,0,0.0
+is not accepted as,1,0,0.0
+was brought,1,0,0.0
+is mentioned in,1,0,0.0
+is mentioned as,1,0,0.0
+was addressed,1,0,0.0
+were addressed,1,0,0.0
+before,1,1,1.0
+batted,1,1,1.0
+resigns,1,1,1.0
+relocates,1,1,1.0
+enters,1,1,1.0
+consisted,1,1,1.0
+is used as,1,0,0.0
+is being constructed,1,0,0.0
+has new base,1,0,0.0
+can is added,1,0,0.0
+can is cooked,1,0,0.0
+can turns,1,0,0.0
+notes,1,1,1.0
+gained promotion to,1,0,0.0
+gained promotion in,1,0,0.0
+being appointed,1,0,0.0
+appointed,1,4,4.0
+suggests negate,1,0,0.0
+suggests consider,1,0,0.0
+may maintained,1,1,1.0
+may broke out of,1,1,1.0
+are characterized by,1,0,0.0
+provide,1,1,1.0
+is caused by,1,0,0.0
+ascends,1,1,1.0
+becomes,1,0,0.0
+is a replica of,1,0,0.0
+is of,1,0,0.0
+took place,1,1,1.0
+may specify,1,1,1.0
+may have,1,0,0.0
+working,1,2,2.0
+was captured by,1,0,0.0
+captured in,1,0,0.0
+bride,1,1,1.0
+july 1985,1,0,0.0
+reinforce,1,1,1.0
+defeat,1,1,1.0
+develops,1,1,1.0
+was sold to,1,0,0.0
+was renamed to,1,0,0.0
+1987,1,0,0.0
+was sold,1,0,0.0
+span,1,1,1.0
+running workshops,1,1,1.0
+sees,1,1,1.0
+premierships,1,1,1.0
+apologized,1,1,1.0
+cited,1,1,1.0
+had a disagreement,1,0,0.0
+was involved in a disagreement,1,0,0.0
+may has severity,1,1,1.0
+may has magnitude,1,0,0.0
+solved,1,1,1.0
+worsened,1,0,0.0
+existed between,1,1,1.0
+could not has statement,1,0,0.0
+could would not tolerate,1,1,1.0
+is defeated by,1,0,0.0
+undertook,1,0,0.0
+head of,1,1,1.0
+has background,1,0,0.0
+considered,1,1,1.0
+was received,1,0,0.0
+inspired,1,1,1.0
+not disbanded,1,0,0.0
+was developed,1,0,0.0
+could in,1,1,1.0
+continues,1,1,1.0
+tenure,1,1,1.0
+hold,1,1,1.0
+is flushed,1,0,0.0
+was re elected,1,0,0.0
+was tipped,1,0,0.0
+adopted,1,1,1.0
+grants,1,1,1.0
+subject,1,1,1.0
+can be applied to,1,1,1.0
+married,1,1,1.0
+still,1,1,1.0
+fit,1,0,0.0
+not contribute,1,1,1.0
+is important,1,0,0.0
+carried,1,1,1.0
+staff,1,1,1.0
+signed into law,1,1,1.0
+helps,1,1,1.0
+marvel,1,1,1.0
+is defined as,1,0,0.0
+patented,1,1,1.0
+sold,1,1,1.0
+sold to,1,2,2.0
+was shown,1,0,0.0
+sets up,1,1,1.0
+was put,1,0,0.0
+trying to organise,1,1,1.0
+trying to,1,0,0.0
+marks,1,1,1.0
+delayed,1,1,1.0
+support,1,0,0.0
+raising,1,1,1.0
+lists,1,1,1.0
+suggests behaves,1,1,1.0
+the power,1,0,0.0
+the power to segregate,1,1,1.0
+were distributed to,1,0,0.0
+distributed,1,1,1.0
+might acquiring,1,1,1.0
+was merged with,1,0,0.0
+measuring,1,1,1.0
+refused,1,1,1.0
+undergone,1,1,1.0
+transformation,1,0,0.0
+undertake,1,1,1.0
+receive,1,0,0.0
+capture,1,1,1.0
+have responsibility for,1,0,0.0
+based at,1,1,1.0
+redesignated as,1,1,1.0
+until,1,0,0.0
+was converted,1,0,0.0
+was re designated,1,0,0.0
+was christened,1,0,0.0
+terminated,1,1,1.0
+has characters,1,0,0.0
+has mecha,1,0,0.0
+has storyline elements,1,0,0.0
+is not navigable,1,0,0.0
+is used by,1,0,0.0
+main,1,1,1.0
+one of,1,2,2.0
+was opened,1,0,0.0
+is over,1,0,0.0
+established by,1,1,1.0
+excluding,1,1,1.0
+was appointed as,1,0,0.0
+was issued,1,0,0.0
+issued,1,1,1.0
+might scorned,1,1,1.0
+might feared,1,0,0.0
+might were,1,0,0.0
+might was,1,0,0.0
+might,1,4,4.0
+is located along,1,0,0.0
+is located west of,1,0,0.0
+came under,1,1,1.0
+protected,1,1,1.0
+ahead,1,0,0.0
+may author,1,1,1.0
+may have suffered,1,1,1.0
+may is made from,1,1,1.0
+may used,1,1,1.0
+exist,1,0,0.0
+teaming up,1,0,0.0
+will,1,0,0.0
+pioneered,1,1,1.0
+blames,1,1,1.0
+shows,1,1,1.0
+believed,1,1,1.0
+had believed,1,0,0.0
+exhibits,1,1,1.0
+releases,1,1,1.0
+leading to,1,1,1.0
+would have to wait,1,0,0.0
+are located in,1,0,0.0
+are located inside,1,0,0.0
+are located,1,0,0.0
+are from,1,0,0.0
+put on,1,0,0.0
+murdered,1,1,1.0
+under,1,1,1.0
+slashes,1,1,1.0
+alerts,1,1,1.0
+is in league with,1,0,0.0
+influences,1,1,1.0
+provided for,1,1,1.0
+was under,1,0,0.0
+was anodic oxidized,1,0,0.0
+was obtained,1,0,0.0
+has album,1,0,0.0
+is released through,1,0,0.0
+is the last part of,1,0,0.0
+is preceded by,1,0,0.0
+land,1,1,1.0
+along,1,0,0.0
+retained,1,1,1.0
+years,1,0,0.0
+could permit,1,1,1.0
+potential not opposes,1,0,0.0
+described,1,1,1.0
+were formed,1,0,0.0
+was able to,1,0,0.0
+was held by,1,0,0.0
+originally,1,1,1.0
+can be represented by,1,1,1.0
+placed emphasis on,1,1,1.0
+no had,1,0,0.0
+no,1,3,3.0
+over,1,1,1.0
+was erected over,1,0,0.0
+was over,1,0,0.0
+has concerns,1,0,0.0
+deals with,1,1,1.0
+heads,1,1,1.0
+is an,1,0,0.0
+protest,1,0,0.0
+is known for,1,0,0.0
+surrounding,1,1,1.0
+involved,1,1,1.0
+tried,1,0,0.0
+was erected into,1,0,0.0
+was knighted,1,0,0.0
+defined as,1,2,2.0
+rather than,1,1,1.0
+reads,1,1,1.0
+is connected with,1,0,0.0
+is closely connected with,1,0,0.0
+is defined,1,0,0.0
+has origin,1,0,0.0
+belonged,1,1,1.0
+has a mass of,1,0,0.0
+has created,1,0,0.0
+was run by,1,0,0.0
+was owned by,1,0,0.0
+revealed to be,1,0,0.0
+would become,1,1,1.0
+should establish,1,1,1.0
+establish,1,1,1.0
+maintain,1,1,1.0
+own,1,1,1.0
+invasion,1,0,0.0
+turned into,1,1,1.0
+did not answer,1,1,1.0
+not are,1,0,0.0
+was to be completed,1,0,0.0
+was abandoned,1,0,0.0
+siphon,1,1,1.0
+create,1,1,1.0
+has engine,1,0,0.0
+has transmission,1,0,0.0
+is served by,1,0,0.0
+switch,1,1,1.0
+houses,1,1,1.0
+is located between,1,0,0.0
+gained a foothold,1,1,1.0
+drives,1,1,1.0
+enrolled,1,1,1.0
+enlists,1,0,0.0
+travel,1,0,0.0
+lick,1,1,1.0
+can not equals,1,1,1.0
+can cannot occur,1,0,0.0
+can supports,1,1,1.0
+can are required,1,1,1.0
+compose,1,0,0.0
+opposing,1,1,1.0
+potential not suitable for,1,1,1.0
+were dealt with,1,0,0.0
+lobby,1,1,1.0
+put together,1,0,0.0
+risk,1,0,0.0
+is charged with,1,0,0.0
+is reviewed by,1,0,0.0
+premiered,1,1,1.0
+was made,1,0,0.0
+of the order of st john,1,1,1.0
+has been executed,1,0,0.0
+never had,1,0,0.0
+never been,1,0,0.0
+first,1,0,0.0
+sortied,1,0,0.0
+boomed,1,1,1.0
+may is directed towards,1,0,0.0
+may is halted,1,1,1.0
+has grandmother,1,0,0.0
+can grows,1,1,1.0
+was left,1,0,0.0
+was hit by,1,0,0.0
+scored,1,1,1.0
+mainly,1,0,0.0
+not might be,1,0,0.0
+might not,1,0,0.0
+has own label,1,0,0.0
+walks,1,1,1.0
+can is known as,1,1,1.0
+can be applied,1,1,1.0
+was designed,1,0,0.0
+has start,1,0,0.0
+has official start,1,0,0.0
+differs,1,1,1.0
+handcuffed,1,1,1.0
+has a relationship,1,0,0.0
+vice versa,1,1,1.0
+without or,1,1,1.0
+refrain,1,1,1.0
+became a member of,1,1,1.0
+had honor,1,0,0.0
+scoring,1,1,1.0
+follows,1,0,0.0
+demonstrates,1,1,1.0
+tries,1,0,0.0
+forms,1,0,0.0
+is used for,1,0,0.0
+not can be presented as,1,1,1.0
+can is not,1,1,1.0
+can not be,1,0,0.0
+can not is,1,0,0.0
+not causes,1,1,1.0
+not is done under,1,0,0.0
+not are used,1,1,1.0
+not is a title,1,0,0.0
+one of the few,1,1,1.0
+staged,1,0,0.0
+may includes,1,0,0.0
+diverges,1,1,1.0
+is not derived from,1,0,0.0
+has population,1,0,0.0
+is reported by,1,0,0.0
+ceased,1,1,1.0
+were pulled,1,0,0.0
+went on to,1,1,1.0
+rested,1,1,1.0
+retired,1,1,1.0
+broke,1,1,1.0
+came through,1,1,1.0
+sank,1,1,1.0
+no shows,1,1,1.0
+no is,1,0,0.0
+was escorted by,1,0,0.0
+was later,1,0,0.0
+was escorted back to,1,0,0.0
+is a binding of,1,0,0.0
+clashed with,1,1,1.0
+wishes,1,1,1.0
+was enshrined,1,0,0.0
+was inducted,1,0,0.0
+was inducted in,1,0,0.0
+inspect,1,1,1.0
+contrasts,1,1,1.0
+aspires,1,1,1.0
+on the grounds that,1,0,0.0
+debut,1,1,1.0
+disappeared,1,1,1.0
+no are provided,1,1,1.0
+is possessed,1,0,0.0
+resists,1,1,1.0
+discovers,1,1,1.0
+is given,1,0,0.0
+unable,1,1,1.0
+does not line up,1,1,1.0
+formation,1,1,1.0
+significant,1,0,0.0
+islamic ethics,1,1,1.0
+can outperform,1,1,1.0
+can contort,1,1,1.0
+was married to,1,0,0.0
+can reduces,1,1,1.0
+can results in,1,1,1.0
+surrendered,1,2,2.0
+invoke,1,0,0.0
+do,1,0,0.0
+re appropriate,1,0,0.0
+have the right,1,0,0.0
+fulfilled,1,1,1.0
+role,1,0,0.0
+can attribute,1,0,0.0
+can combine,1,1,1.0
+visited,1,1,1.0
+was intended to have,1,0,0.0
+can be viewed as,1,1,1.0
+can be viewed,1,0,0.0
+is based in,1,0,0.0
+has signal wattage,1,0,0.0
+is a rimshot,1,0,0.0
+occurred during,1,0,0.0
+created demand for,1,1,1.0
+had a name change,1,0,0.0
+changed its name,1,0,0.0
+renamed to,1,1,1.0
+was changed to,1,0,0.0
+was known as,1,0,0.0
+changed its name to,1,0,0.0
+is produced by,1,0,0.0
+is produced for,1,0,0.0
+could leads to,1,1,1.0
+could lead to,1,1,1.0
+is compiled from,1,0,0.0
+reacted,1,1,1.0
+bypassing,1,1,1.0
+directing,1,0,0.0
+academy award winning,1,1,1.0
+patriarch of,1,1,1.0
+founder,1,1,1.0
+former ceo,1,1,1.0
+builds,1,1,1.0
+can be acquired,1,1,1.0
+aim,1,1,1.0
+can possesses,1,1,1.0
+can are sensitive,1,0,0.0
+finds,1,1,1.0
+surround,1,1,1.0
+spent,1,1,1.0
+been,1,0,0.0
+having,1,0,0.0
+acquitted,1,1,1.0
+idolized,1,0,0.0
+destroy,1,1,1.0
+army,1,1,1.0
+talked to,1,1,1.0
+signifies,1,1,1.0
+hangs,1,1,1.0
+was established to,1,0,0.0
+is used to,1,0,0.0
+has secretary,1,0,0.0
+reduced,1,0,0.0
+do not match,1,1,1.0
+not of,1,0,0.0
+can adjust,1,1,1.0
+correct,1,1,1.0
+is sent,1,0,0.0
+points,1,1,1.0
+had surrendered,1,0,0.0
+was bought by,1,0,0.0
+was bought,1,0,0.0
+was played by,1,0,0.0
+appeared in,1,1,1.0
+president of,1,1,1.0
+president,1,0,0.0
+clear,1,1,1.0
+applied,1,1,1.0
+co opted,1,1,1.0
+was one of,1,0,0.0
+regulate,1,1,1.0
+took control of,1,1,1.0
+pressured,1,0,0.0
+was pressured by,1,0,0.0
+was posted,1,0,0.0
+was promoted,1,0,0.0
+reserved,1,0,0.0
+goes,1,0,0.0
+chairman,1,1,1.0
+get through,1,0,0.0
+is a subfamily of,1,0,0.0
+is treated as,1,0,0.0
+ordered,1,1,1.0
+ordered from,1,1,1.0
+have been affected,1,0,0.0
+formerly,1,1,1.0
+television series,1,1,1.0
+broke away from,1,1,1.0
+scheduled,1,1,1.0
+desired,1,1,1.0
+collaborate,1,0,0.0
+transitioned,1,1,1.0
+no thought,1,1,1.0
+no chances,1,1,1.0
+spoken,1,1,1.0
+unintelligible,1,1,1.0
+not be,1,0,0.0
+is situated on,1,0,0.0
+officer,1,0,0.0
+had officer,1,0,0.0
+could not undertake,1,0,0.0
+could not is,1,0,0.0
+declined,1,0,0.0
+spread,1,2,2.0
+played for,1,1,1.0
+kept,1,1,1.0
+is seen,1,0,0.0
+is characterized by,1,0,0.0
+may began,1,1,1.0
+may gave,1,1,1.0
+may started,1,0,0.0
+available,1,0,0.0
+came from,1,0,0.0
+likely are in,1,0,0.0
+are likely,1,0,0.0
+were spread,1,0,0.0
+was tempered,1,0,0.0
+dropped,1,1,1.0
+knocked down,1,1,1.0
+knocked out,1,0,0.0
+no made,1,0,0.0
+is primarily reached by,1,0,0.0
+not trusts,1,1,1.0
+suggest was brought up as,1,1,1.0
+suggest spent,1,1,1.0
+suggest left,1,0,0.0
+suggest was converted to,1,1,1.0
+suggest was,1,0,0.0
+not supplied,1,0,0.0
+may replacing,1,1,1.0
+may of,1,0,0.0
+may had,1,0,0.0
+may 2010,1,1,1.0
+may suspended,1,1,1.0
+may contained,1,1,1.0
+may was entered,1,1,1.0
+may was suspended,1,0,0.0
+could has album,1,1,1.0
+could has song,1,0,0.0
+could contains,1,0,0.0
+could is reprise of,1,1,1.0
+could is fifth song of,1,1,1.0
+retains,1,1,1.0
+incorporated,1,1,1.0
+can marking,1,0,0.0
+can mark,1,1,1.0
+prior to,1,1,1.0
+could was used for,1,0,0.0
+inclusion,1,1,1.0
+may indicate,1,0,0.0
+may show,1,0,0.0
+delivers,1,1,1.0
+superiors,1,0,0.0
+might on,1,1,1.0
+might is,1,0,0.0
+returns,1,1,1.0
+was ordered,1,0,0.0
+was rebuilt,1,0,0.0
+has won,1,0,0.0
+has been joined by,1,0,0.0
+can liberate,1,0,0.0
+could have,1,0,0.0
+may is,1,0,0.0
+may was won by,1,1,1.0
+may was defeated by,1,1,1.0
+may played,1,0,0.0
+may was the time when,1,0,0.0
+functioned as,1,0,0.0
+hurled,1,1,1.0
+through,1,0,0.0
+seeing,1,1,1.0
+is a,1,0,0.0
+racing,1,0,0.0
+saw,1,1,1.0
+leave,1,1,1.0
+reconstructed,1,1,1.0
+depicted,1,1,1.0
+was transferred,1,0,0.0
+was burned,1,0,0.0
+1967 shop fire,1,0,0.0
+carrying,1,1,1.0
+is notable,1,0,0.0
+were widely distributed,1,0,0.0
+without guard,1,0,0.0
+without passed,1,1,1.0
+without supposed to,1,1,1.0
+without soon,1,1,1.0
+without went,1,0,0.0
+alma mater,1,1,1.0
+were killed,1,0,0.0
+was established,1,0,0.0
+dedicate,1,1,1.0
+produced by,1,2,2.0
+would be,1,0,0.0
+was founded by,1,0,0.0
+was named,1,0,0.0
+was originally named,1,0,0.0
+got,1,0,0.0
+was erected as,1,0,0.0
+planned,1,1,1.0
+folded,1,1,1.0
+is readable,1,0,0.0
+incorporate,1,0,0.0
+usually,1,0,0.0
+also,1,0,0.0
+is named,1,0,0.0
+is the name of,1,0,0.0
+is the location of,1,0,0.0
+has evolved,1,0,0.0
+pledged,1,0,0.0
+has cross section,1,0,0.0
+beginning in,1,0,0.0
+may is open,1,1,1.0
+may is reserved for,1,0,0.0
+have style,1,0,0.0
+have decorations,1,0,0.0
+has pillars,1,0,0.0
+has decorations,1,0,0.0
+were removed,1,0,0.0
+at the head of the south fork,1,1,1.0
+attempts,1,1,1.0
+breaks,1,1,1.0
+devours,1,1,1.0
+climbed,1,1,1.0
+was named after,1,0,0.0
+named after,1,1,1.0
+was the time,1,0,0.0
+titled,1,1,1.0
+curtailed,1,1,1.0
+consists of,1,1,1.0
+was redesigned,1,0,0.0
+was reopened,1,0,0.0
+were called,1,0,0.0
+were renamed,1,0,0.0
+settles,1,1,1.0
+alleged,1,1,1.0
+signify,1,1,1.0
+feature,1,0,0.0
+use,1,1,1.0
+increase,1,1,1.0
+used to be,1,0,0.0
+reopened,1,2,2.0
+are visually,1,0,0.0
+stem,1,1,1.0
+aided,1,1,1.0
+encouraged,1,1,1.0
+win,1,1,1.0
+was broadcast,1,0,0.0
+can defines,1,1,1.0
+was picked up,1,0,0.0
+responded,1,0,0.0
+equipped with,1,1,1.0
+is common in,1,0,0.0
+occurs in,1,1,1.0
+opposed,1,1,1.0
+employed,1,1,1.0
+no has,1,0,0.0
+live,1,1,1.0
+transferred,1,2,2.0
+being,1,0,0.0
+has been operating,1,0,0.0
+not possesses,1,1,1.0
+taken,1,4,4.0
+began showing,1,0,0.0
+distancing,1,1,1.0
+resolved,1,1,1.0
+reinstated or created,1,1,1.0
+could no contained,1,1,1.0
+may,1,8,8.0
+was transformed,1,0,0.0
+may surprised,1,1,1.0
+may has studios,1,0,0.0
+was launched by,1,0,0.0
+was sponsored by,1,0,0.0
+was commissioned,1,0,0.0
+was commanded by,1,0,0.0
+was the date of,1,0,0.0
+reported to be,1,0,0.0
+see also,1,1,1.0
+without did,1,1,1.0
+wished,1,0,0.0
+had wished,1,0,0.0
+forged,1,1,1.0
+chosen,0,2,2.0
+released through,0,1,1.0
+knighted,0,1,1.0
+administered by,0,2,2.0
+run by,0,1,1.0
+revealed to,0,1,1.0
+executed,0,2,2.0
+in,0,3,3.0
+a relationship with,0,2,2.0
+united with,0,2,2.0
+given,0,1,1.0
+intended to,0,1,1.0
+situated on,0,1,1.0
+characterized by,0,2,2.0
+primarily reached by,0,1,1.0
+raised,0,2,2.0
+widely distributed,0,1,1.0
+founded by,0,1,1.0
+renamed as,0,1,1.0
+directed by,0,2,2.0
+practiced at,0,2,2.0
+launched by,0,1,1.0
+sponsored by,0,1,1.0
+connected with,0,1,1.0
+bought by,0,1,1.0
+promoted,0,1,1.0
+been affected,0,1,1.0
+sworn,0,1,1.0
+reunited with,0,1,1.0
+a mass of,0,1,1.0
+abandoned,0,1,1.0
+been operating,0,1,1.0
+used to,0,1,1.0
+re elected,0,1,1.0
+served with,0,2,2.0
+converted,0,1,1.0
+erected as,0,1,1.0
+not derived from,0,1,1.0
+able to,0,1,1.0
+captured by,0,1,1.0
+possessed,0,1,1.0
+recalled,0,2,2.0
+home to,0,2,2.0
+posted,0,1,1.0
+compiled from,0,1,1.0
+to be dredged,0,1,1.0
+ancestors,0,1,1.0
+tipped,0,1,1.0
+dammed,0,1,1.0
+decorations,0,1,1.0
+promoted with,0,1,1.0
+equipped,0,2,2.0
+mentioned as,0,1,1.0
+located at,0,2,2.0
+enshrined,0,1,1.0
+seen,0,1,1.0
+pillars,0,1,1.0
+created by,0,1,1.0
+been included,0,1,1.0
+style,0,1,1.0
+based in,0,1,1.0
+located inside,0,1,1.0
+owned by,0,1,1.0
+official start,0,1,1.0
+christened,0,1,1.0
+held in,0,2,2.0
+commanded by,0,1,1.0
+defeated by,0,1,1.0
+to be completed,0,1,1.0
+a replica of,0,1,1.0
+likely,0,5,5.0
+thoroughly renovated,0,1,1.0
+being constructed,0,1,1.0
+burned,0,1,1.0
+married to,0,1,1.0
+cut,0,1,1.0
+released on,0,1,1.0
+rebuilt,0,1,1.0
+removed,0,3,3.0
+used by,0,1,1.0
+transformed,0,1,1.0
+informed,0,2,2.0
+could,0,3,3.0
+engine,0,1,1.0
+the year,0,2,2.0
+the location of,0,1,1.0
+dealt with,0,1,1.0
+erected over,0,1,1.0
+portrayed,0,2,2.0
+re designated,0,1,1.0
+population,0,1,1.0
+requested,0,2,2.0
+background,0,1,1.0
+used as,0,1,1.0
+reprieved,0,1,1.0
+on,0,1,1.0
+caused by,0,1,1.0
+charged with,0,1,1.0
+not navigable,0,1,1.0
+nature,0,2,2.0
+redesigned,0,1,1.0
+closely connected with,0,1,1.0
+merged with,0,2,2.0
+a subfamily of,0,1,1.0
+not accepted as,0,1,1.0
+laid to rest,0,1,1.0
+a binding of,0,1,1.0
+erected into,0,1,1.0
+produced for,0,1,1.0
+involved in a disagreement,0,1,1.0
+reported by,0,1,1.0
+casting,0,1,1.0
+without,0,1,1.0
+from,0,1,1.0
+honor,0,1,1.0
+used for,0,1,1.0
+important,0,1,1.0
+barely hearable,0,2,2.0
+should,0,1,1.0
+originally named,0,1,1.0
+crushed,0,2,2.0
+pressured by,0,1,1.0
+reported to,0,1,1.0
+been executed,0,1,1.0
+transmission,0,1,1.0
+held by,0,1,1.0
+reviewed by,0,1,1.0
+established to,0,1,1.0
+appointed as,0,1,1.0
+evolved,0,1,1.0
+unaware,0,1,1.0
+responsible for,0,1,1.0
+excised,0,1,1.0
+tempered,0,1,1.0
+adapted to,0,1,1.0
+the name of,0,1,1.0
+played by,0,1,1.0
+proven,0,3,3.0
+located west of,0,1,1.0
+for,0,2,2.0
+located near,0,3,3.0
+buried,0,1,1.0
+designed,0,1,1.0
+been joined by,0,1,1.0
+shown,0,1,1.0
+base,0,1,1.0
+quenched by,0,1,1.0
+storyline elements,0,1,1.0
+preceded by,0,1,1.0
+flushed,0,1,1.0
+a,0,1,1.0
+visually,0,1,1.0
+mecha,0,1,1.0
+cross section,0,1,1.0
+common in,0,1,1.0

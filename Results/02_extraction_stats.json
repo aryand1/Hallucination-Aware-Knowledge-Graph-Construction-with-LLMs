@@ -1,0 +1,8 @@
+{
+  "n_sentences": 775,
+  "n_triples_raw": 5599,
+  "n_triples_after_dedup": 5459,
+  "n_malformed": 98,
+  "total_extraction_s": 1801.06,
+  "avg_per_sentence_s": 2.32
+}

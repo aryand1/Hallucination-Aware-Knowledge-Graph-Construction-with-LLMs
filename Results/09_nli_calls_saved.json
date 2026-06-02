@@ -1,0 +1,7 @@
+{
+  "max_possible_nli_calls": 26670,
+  "actual_nli_calls": 5497,
+  "pct_saved": 79.39,
+  "local_stage_nli_calls": 3945,
+  "retrieval_stage_nli_calls": 1552
+}

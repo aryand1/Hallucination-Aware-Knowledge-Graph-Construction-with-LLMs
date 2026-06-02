@@ -1,0 +1,378 @@
+sent_id,Subject,Predicate,Object,reason
+sent_0003,Jesus,not is,a human being,reject
+sent_0003,Jesus,not was loved by,God,reject
+sent_0003,Jesus,not was exalted by,God,reject
+sent_0003,God,not loved,Jesus,reject
+sent_0003,God,not exalted,Jesus,reject
+sent_0012,Assistant to the President,is,President,reject
+sent_0012,Deputy Assistant to the President,is,President,reject
+sent_0012,Special Assistant to the President,is,President,unverified
+sent_0019,RSNO,has base,Royal Concert Hall,unverified
+sent_0027,The division,may took,Cisterna,unverified
+sent_0028,Cashel Byron,without follows,novel,reject
+sent_0028,Cashel Byron,without is,world champion prizefighter,reject
+sent_0028,Cashel Byron,without tries,woo,reject
+sent_0028,Cashel Byron,without tries,Lydia Carew,reject
+sent_0028,Cashel Byron,without has,illegal profession,reject
+sent_0028,Lydia Carew,without is,wealthy aristocrat,unverified
+sent_0028,Cashel Byron,without woos,Lydia Carew,reject
+sent_0031,Wallonia,is home to,the remainder,unverified
+sent_0045,sector,captured,Israel,reject
+sent_0046,Yaromir,has,Mlada,reject
+sent_0052,Latchford viaduct,operational,when,reject
+sent_0052,Latchford viaduct,operational,to make extensive repairs,reject
+sent_0052,Latchford viaduct,operational,extensive repairs,reject
+sent_0052,Latchford viaduct,operational,repairs,reject
+sent_0052,Latchford viaduct,operational,keep latchford viaduct operational,unverified
+sent_0052,Latchford viaduct,operational,keep latchford viaduct operational,unverified
+sent_0052,Latchford viaduct,operational,keep,reject
+sent_0052,Latchford viaduct,operational,operational,reject
+sent_0061,Arrangements,not were made for,mid-August performances in 1944,reject
+sent_0061,Arrangements,not were made for,performances,reject
+sent_0061,Arrangements,not were made for,August performances,reject
+sent_0061,Arrangements,not were made for,performances in 1944,reject
+sent_0061,Arrangements,not were made,in 1944,reject
+sent_0061,Arrangements,not were made,performances,reject
+sent_0061,Arrangements,not were made,august,reject
+sent_0061,Arrangements,not were made,mid august,reject
+sent_0061,Joseph Goebbels,not declared,total war,reject
+sent_0061,Joseph Goebbels,not declared,war,reject
+sent_0061,Joseph Goebbels,not closed,all theatres,reject
+sent_0061,Joseph Goebbels,not closed,theatres,reject
+sent_0061,Joseph Goebbels,not closed,theatres within the third reich resulting,reject
+sent_0061,Joseph Goebbels,not closed,all,reject
+sent_0061,Joseph Goebbels,not closed,Third Reich,reject
+sent_0061,Joseph Goebbels,not declared,total,reject
+sent_0061,Joseph Goebbels,not declared,declared total war,reject
+sent_0061,Joseph Goebbels,not closed,theatres within,reject
+sent_0061,Joseph Goebbels,not closed,closed all theatres within the third reich,reject
+sent_0061,Joseph Goebbels,not closed,theatres within the,reject
+sent_0061,The 20 July plot,not was,to assassinate Hitler,reject
+sent_0061,The 20 July plot,not was,plot,reject
+sent_0061,The 20 July plot,not was,to assassinate,reject
+sent_0061,The 20 July plot,not was,assassinate Hitler,reject
+sent_0061,Hitler,not was,assassinate,unverified
+sent_0061,Hitler,not was,the 20 july plot to assassinate,reject
+sent_0061,Hitler,not was,plot to assassinate,reject
+sent_0061,The Third Reich,not was,closed,reject
+sent_0061,The Third Reich,not was,hitler joseph goebbels,unverified
+sent_0061,The Third Reich,not was,joseph goebbels,unverified
+sent_0061,The Third Reich,not was,closed all theatres,unverified
+sent_0061,The Third Reich,not was,closed all theatres,unverified
+sent_0064,Graves,was forced out,bond,unverified
+sent_0071,Blackburne,could not would,the influence,reject
+sent_0071,influence,not can be,wielded,reject
+sent_0071,Attorney General,could not is,indication of the influence,reject
+sent_0073,Robin,unable work,partners,reject
+sent_0073,Robin,unable work,Stephanie,reject
+sent_0073,Ariana,unable work,partners,reject
+sent_0073,Ariana,unable work,Robin,unverified
+sent_0073,Robin,unable grow,closer,reject
+sent_0073,Stephanie,unable grow,closer,reject
+sent_0078,Overseas teams,would not return,Russia,unverified
+sent_0078,Overseas teams,not return,1998,reject
+sent_0078,Overseas teams,not return,Moscow,reject
+sent_0078,Russia,would not return,Overseas teams,reject
+sent_0078,A youth tournament,not is held,Moscow,reject
+sent_0085,Charles,not prorogued,parliament,reject
+sent_0085,parliament,not was,prorogued,reject
+sent_0101,smaller boats,can turning turtle,is less frequent but more dangerous,unverified
+sent_0105,objects,not be,away,reject
+sent_0105,objects,not be,far,reject
+sent_0110,Legislation,removes,death benefits,unverified
+sent_0110,Legislation,removes,police officers,reject
+sent_0110,Legislation,removes,firefighters,reject
+sent_0111,surface,has nature,ionic,unverified
+sent_0111,surface,has nature,polar,unverified
+sent_0123,patients,not includes,support groups,reject
+sent_0123,patients,not includes,psychotherapy,reject
+sent_0124,The narrator,not has,suitcase,reject
+sent_0124,The narrator,not grabbed,suitcase,reject
+sent_0124,The narrator,not fled,compartment,reject
+sent_0124,The narrator,not has,fled,reject
+sent_0125,Arsenal,became,sheffield wednesday,reject
+sent_0125,Arsenal,became,hillsborough,reject
+sent_0125,Arsenal,became,sheffield wednesday,reject
+sent_0125,Arsenal,became,hillsborough,reject
+sent_0125,Arsenal,became,sheffield wednesday,reject
+sent_0125,Arsenal,became,hillsborough,reject
+sent_0125,Arsenal,became,sheffield wednesday,reject
+sent_0125,Arsenal,became,hillsborough,reject
+sent_0125,Arsenal,became,sheffield wednesday at hillsborough,reject
+sent_0142,New York City,not is iconic,Americans,reject
+sent_0142,New York City,not is iconic,Europeans,reject
+sent_0142,New York City,not is,city,reject
+sent_0142,New York City,not is,melting pot,reject
+sent_0142,Americans,not consider,New York City,reject
+sent_0142,Europeans,not consider,New York City,reject
+sent_0142,New York City,not has,ethnic groups,reject
+sent_0142,New York City,not has,neighborhoods,reject
+sent_0142,New York City,not has,Chinatown,reject
+sent_0142,New York City,not has,Little Italy,reject
+sent_0144,Ely Cathedral,never has,wooden ceiling,reject
+sent_0144,Ely Cathedral,never retains,wooden ceiling,reject
+sent_0144,Ely Cathedral,never has,nave,reject
+sent_0160,Sikorsky,not say,factors,reject
+sent_0160,Sikorsky,not say,budget cuts,reject
+sent_0160,Sikorsky,not say,requirement creep,reject
+sent_0160,Sikorsky,not say,long development period,reject
+sent_0160,Boeing,not say,factors,reject
+sent_0160,Boeing,not say,budget cuts,reject
+sent_0160,Boeing,not say,requirement creep,reject
+sent_0160,Boeing,not say,long development period,reject
+sent_0160,factors,not cause,problems,reject
+sent_0160,requirement creep,not cause,problems,reject
+sent_0160,long development period,not cause,problems,reject
+sent_0175,Peter Bywaters,not offers,personal English as a second language tuition,reject
+sent_0175,Peter Bywaters,not offers,live-in basis,reject
+sent_0175,Peter Bywaters,not offers,tuition,reject
+sent_0175,Peter Bywaters,not offers,at his home,reject
+sent_0175,Peter Bywaters,not offers,in Brighton,reject
+sent_0175,Peter Bywaters,not offers,at his home in Brighton,reject
+sent_0175,Peter Bywaters,not offers,personal English as a second language tuition on a live-in basis,reject
+sent_0175,Peter Bywaters,not offers,personal english as a second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,personal english as a second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,personal English as a second language tuition on a live-in basis at his home,reject
+sent_0175,Peter Bywaters,not offers,personal English as a second language tuition on a live-in basis at his home in Brighton,reject
+sent_0175,Peter Bywaters,not offers,English as a second language tuition,reject
+sent_0175,Peter Bywaters,not offers,English as a second language tuition on a live-in basis,reject
+sent_0175,Peter Bywaters,not offers,english as a second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,english as a second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,English as a second language tuition on a live-in basis at his home,reject
+sent_0175,Peter Bywaters,not offers,English as a second language tuition on a live-in basis at his home in Brighton,reject
+sent_0175,Peter Bywaters,not offers,second language tuition,reject
+sent_0175,Peter Bywaters,not offers,second language tuition on a live-in basis,reject
+sent_0175,Peter Bywaters,not offers,second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,second language tuition on,reject
+sent_0175,Peter Bywaters,not offers,second language tuition on a live-in basis at his home,reject
+sent_0175,Peter Bywaters,not offers,second language tuition on a live-in basis at his home in Brighton,reject
+sent_0175,Peter Bywaters,not offers,language tuition,reject
+sent_0175,Peter Bywaters,not offers,language tuition on a live-in basis,reject
+sent_0175,Peter Bywaters,not offers,language tuition on,reject
+sent_0175,Peter Bywaters,not offers,at his home in brighton,reject
+sent_0175,Peter Bywaters,not offers,language tuition on a live-in basis at his home,reject
+sent_0175,Peter Bywaters,not offers,language tuition on a live-in basis at his home in Brighton,reject
+sent_0175,Peter Bywaters,not offers,tuition on a live-in basis,reject
+sent_0175,Peter Bywaters,not offers,at his home,reject
+sent_0175,Peter Bywaters,not offers,at his home in brighton,reject
+sent_0175,Peter Bywaters,not offers,tuition on a live-in basis at his home,reject
+sent_0175,[Peter Bywaters,not offers,tuition on a live-in basis at his home in Brighton,reject
+sent_0177,Canal de l'Ourcq,not built,1806,reject
+sent_0177,Canal de l'Ourcq,not built,Napoleonic era,reject
+sent_0177,Canal de l'Ourcq,not destined,inland navigation,reject
+sent_0180,Rockwell,never retroactively re designated,MPTA,reject
+sent_0180,Rockwell,never re designated,MPTA-098,reject
+sent_0180,NASA,never retroactively re designated,MPTA,reject
+sent_0180,NASA,never re designated,MPTA-098,reject
+sent_0180,MPTA,never was re designated,MPTA-098,reject
+sent_0194,The school,was founded,William Frankfurth,unverified
+sent_0199,cockpit,protected,engine,reject
+sent_0202,Muhammad ibn Abu Bakr,praise,Shi'a,reject
+sent_0214,boss,is,regular enemies,reject
+sent_0236,Byers,potential not criticizes,implications,reject
+sent_0236,concept,potential not has,definition,reject
+sent_0236,definition,potential not provides,support,reject
+sent_0236,system,potential not provides,support,reject
+sent_0236,system,potential not dominates,planet,reject
+sent_0246,He,no saw,active service,reject
+sent_0246,He,no served,Scottish forces,reject
+sent_0250,Charles,is able to,declare,reject
+sent_0250,Charles,is,able,reject
+sent_0285,Leigh,was born in,world,reject
+sent_0289,109 individuals,not belong to,another church,reject
+sent_0289,individuals,not are,109,unverified
+sent_0292,officers,not equipped with,less-lethal weapons,reject
+sent_0292,officers,not are,equipped,reject
+sent_0292,officers,not equipped with,weapons,reject
+sent_0292,less-lethal weapons,not are,use,reject
+sent_0292,less-lethal weapons,not used,against,reject
+sent_0301,fstack-protector flag,not protects,some vulnerable functions,reject
+sent_0301,fstack-protector flag,not protects,all functions,reject
+sent_0301,fstack-protector-all flag,not protects,all functions,reject
+sent_0312,They,possess,eyelids,reject
+sent_0314,Tram services,replace,buses,reject
+sent_0315,ones,can not equals,one,unverified
+sent_0318,Opponent's weaknesses,are,weaknesses,unverified
+sent_0322,parties,without is,fair,reject
+sent_0322,fact,without is,basis,reject
+sent_0322,fact,without is,provable,reject
+sent_0327,Wild radish seeds,potential not contain,48 % oil content,reject
+sent_0327,Wild radish seeds,potential not contain,oil,reject
+sent_0327,Oil,potential not be,a potential source of biofuel,reject
+sent_0338,California,has been executed,nearly 37 times more inmates than,reject
+sent_0340,Alexander,never had,entire career,reject
+sent_0340,Alexander,never had,incident,reject
+sent_0340,Alexander,never said,never,reject
+sent_0345,They,not believe,God,reject
+sent_0345,They,not believe,a single entity,reject
+sent_0359,Human behavioral ecologists,might not assume,what,unverified
+sent_0372,him,be,off,unverified
+sent_0372,him,be,floor,unverified
+sent_0372,him,be,five,unverified
+sent_0375,lower altitudes,include,bristlecone pine forests,reject
+sent_0378,Special headgear,without is,part,unverified
+sent_0378,Glasses,without is,part,unverified
+sent_0399,Printing,not is evaded,court order,unverified
+sent_0404,Samaritan tradition,not is based on,fact,unverified
+sent_0404,Samaritan ethnonym,not is derived from,true Israelite religion,reject
+sent_0406,Gonzalez,not accused,defrauding,reject
+sent_0406,Gonzalez,not defrauding,West Bronx Neighborhood Association Inc.,reject
+sent_0406,Gonzalez,not using,funds,reject
+sent_0406,funds,not donated,West Bronx Neighborhood Association Inc.,reject
+sent_0406,funds,not used,pay for,reject
+sent_0406,Gonzalez,not pay for,"over $37, 000 in personal expenses",reject
+sent_0408,new world,is,primitive,unverified
+sent_0414,animal,no cares for,young,reject
+sent_0422,Daniel O'Connell,wishes,appointment of Abraham Brewster as Law Adviser to the Lord Lieutenant of Ireland,unverified
+sent_0424,microbe,not can survive,narrow pH range,unverified
+sent_0424,narrow pH range,can not be,pH range,reject
+sent_0433,Villagers,killed,8,reject
+sent_0437,Yesler Way,not marks,boundary,reject
+sent_0437,Yesler Way,not separates,two different plats,reject
+sent_0437,The northern border,not zigzags,numerous streets,reject
+sent_0442,practice,can truly cancels,government debt,reject
+sent_0443,she,not raising,her own children,reject
+sent_0443,she,not raising,her nephews,reject
+sent_0443,her nephews,not be,orphaned,reject
+sent_0443,the plague,not causes,her nephews who had been orphaned,reject
+sent_0446,Carl,not uses,old magic,reject
+sent_0446,Carl,not tame,Deep Crow,reject
+sent_0446,Carl,not claim,it is not his first time to the rodeo,reject
+sent_0446,Carl,not claim,not his first time to the rodeo,reject
+sent_0454,Beuerlein,no was,red-hot,reject
+sent_0454,Beuerlein,no out dueling,Brett Favre,reject
+sent_0454,Beuerlein,no passing,a then franchise-record,reject
+sent_0458,Signal,is barely hearable,downtown area,unverified
+sent_0493,He,never was a member of,European Convention,reject
+sent_0493,European Convention,never drafted,text of the European Constitution,reject
+sent_0493,European Constitution,never was,drafted,reject
+sent_0501,human rights groups,no pressure,BAE Systems,reject
+sent_0505,seed strains,not have,antigenicities,reject
+sent_0505,vaccines,not fail,protect,reject
+sent_0505,vaccinees,not are,vaccinees,unverified
+sent_0505,vaccines,not fail,vaccinees,reject
+sent_0538,St Paul's Cathedral,commented about,bomb,unverified
+sent_0551,Anglican church,broke away from,Welsh Methodists,reject
+sent_0557,his chances,no thought,to be,unverified
+sent_0560,it,not must be done,on foot,reject
+sent_0565,mature entrants to the teaching profession,could not aimed at,teacher training,reject
+sent_0566,Its cultivation,was introduced,Asian species,reject
+sent_0569,John Stewart,not brought,New Warworld,reject
+sent_0569,John Stewart,not brought,Yellow Central Power Battery,reject
+sent_0569,Guy Gardner,not brought,New Warworld,reject
+sent_0569,Guy Gardner,not brought,Yellow Central Power Battery,reject
+sent_0569,New Warworld,not was,brought down,reject
+sent_0569,Yellow Central Power Battery,not was,brought down,reject
+sent_0569,New Warworld,not was,detonated,reject
+sent_0569,Yellow Central Power Battery,not was,detonated,reject
+sent_0569,New Warworld,not was,next to the anti monitor,reject
+sent_0569,Yellow Central Power Battery,not was,next to the anti monitor,reject
+sent_0569,Anti-Monitor,not was,new warworld,reject
+sent_0569,Anti-Monitor,not was,yellow central power battery which were detonated next,unverified
+sent_0569,New Warworld,not was,contained by a shield,reject
+sent_0569,Yellow Central Power Battery,not was,contained by a shield,reject
+sent_0569,shield,not was,created by hundreds of green lanterns,reject
+sent_0569,shield,not was,created by hundreds of green lanterns,reject
+sent_0569,Green Lanterns,not created,shield,reject
+sent_0569,hundreds of Green Lanterns,not created,shield,reject
+sent_0577,Lemmy,could not believes,if Will Reid Dick had not been there,reject
+sent_0577,Lemmy,could not believes,they could have worked through the problems,reject
+sent_0577,Lemmy,could not believes,they could have worked through,reject
+sent_0577,Lemmy,could not believes,they,reject
+sent_0577,Lemmy,could not believes,have,reject
+sent_0577,Lemmy,could not believes,worked,unverified
+sent_0577,Lemmy,could not believes,could,reject
+sent_0577,Lemmy,could not believes,have worked,reject
+sent_0582,Females,had,median income,reject
+sent_0583,Females,had,median income,reject
+sent_0583,Females,had,income,unverified
+sent_0589,Buddhist ethos,without is,ethos,reject
+sent_0592,station,no remains,disused subway,unverified
+sent_0594,UTV,no close,station,reject
+sent_0594,station,no be,planned,reject
+sent_0594,decision,no close,station,reject
+sent_0594,decision,no be,planned,reject
+sent_0596,Not everyone,not trusts,Matau,unverified
+sent_0596,Vakama,not has,vision,reject
+sent_0596,Matau,not considers,delusions,reject
+sent_0596,Vakama,not is,fire-spitter,unverified
+sent_0598,The epilogue,not referred to,The Castaway,reject
+sent_0598,The narrative,not referred to,sequel,reject
+sent_0598,The narrative,not will,be seen,reject
+sent_0598,abandonment,not befell,myself,reject
+sent_0619,Her,report,believe,reject
+sent_0651,The defile,without was,supposed to guard,unverified
+sent_0676,1st Armored,deploy,single entity,reject
+sent_0699,Jane Waterleigh,named,Barrie,reject
+sent_0702,The staff,not provides,a family-style home-cooked dinner,reject
+sent_0702,The staff,not provides,dinner,reject
+sent_0702,The staff,not provides,every night,reject
+sent_0702,The staff,not provides,dinner,reject
+sent_0702,Dartmouth students,not attend,a family-style home-cooked dinner,reject
+sent_0702,Dartmouth students,not attend,dinner,reject
+sent_0702,Dartmouth students,not attend,every night,reject
+sent_0702,Dartmouth students,not attend,dinner,reject
+sent_0702,Community members,not attend,a family-style home-cooked dinner,reject
+sent_0702,Community members,not attend,dinner,reject
+sent_0702,Community members,not attend,every night,reject
+sent_0702,Community members,not attend,dinner,reject
+sent_0702,Appalachian Trail thru-hikers,not attend,a family-style home-cooked dinner,reject
+sent_0702,Appalachian Trail thru-hikers,not attend,dinner,reject
+sent_0702,Appalachian Trail thru-hikers,not attend,every night,reject
+sent_0702,Appalachian Trail thru-hikers,not attend,dinner,reject
+sent_0702,Tourists,not attend,a family-style home-cooked dinner,reject
+sent_0702,Tourists,not attend,dinner,reject
+sent_0702,Tourists,not attend,every night,reject
+sent_0702,Tourists,not attend,dinner,reject
+sent_0702,Dartmouth professors,not attend,a family-style home-cooked dinner,reject
+sent_0702,Dartmouth professors,not attend,dinner,reject
+sent_0702,Dartmouth professors,not attend,every night,reject
+sent_0702,Dartmouth professors,not attend,dinner,reject
+sent_0704,Stations,were renamed,Midsomer Norton Upper,unverified
+sent_0716,Households,no had,children under the age of 18 living with them,reject
+sent_0716,Households,no had,married couples living together,reject
+sent_0716,Households,no had,a female householder with no husband present,reject
+sent_0716,Households,no were,non-families,reject
+sent_0716,Children under the age of 18 living with them,no were,households out of which 30 1,reject
+sent_0717,Households,no had,children under the age of 18 living with them,reject
+sent_0717,Households,no had,married couples living together,reject
+sent_0717,Households,no had,a female householder with no husband present,reject
+sent_0717,Households,no were,non-families,reject
+sent_0717,Children under the age of 18 living with them,no were,households out of which 35 00,unverified
+sent_0718,Households,no had,children under the age of 18 living with them,reject
+sent_0718,Households,no had,married couples living together,reject
+sent_0718,Households,no had,female householder with no husband present,reject
+sent_0718,Households,no were,non-families,reject
+sent_0718,Children under the age of 18 living with them,no were,households out of which 35 3,unverified
+sent_0718,Non-families,no were,6 524 households,unverified
+sent_0740,Medieval school of Jewish Philosophy,no framed,Judaism,reject
+sent_0740,Medieval school of Jewish Philosophy,no framed,Greek thought,reject
+sent_0740,Medieval school of Jewish Philosophy,no framed,human intellect,reject
+sent_0750,Uncle Sam,not prefers,small beer,reject
+sent_0750,he,not is,a yeoman,reject
+sent_0750,he,not prefers,domestic peace,reject
+sent_0752,Wakeboarding,is practiced by,women,unverified
+sent_0753,Watson,elected,his caucus,reject
+sent_0757,Stauffenberg,could no convinced,that no one in the room could have survived,reject
+sent_0757,the explosion,could no tore,the hut,unverified
+sent_0757,the explosion,could no went through,the hut,unverified
+sent_0757,Stauffenberg,could no thought,that no one in the room could have survived,reject
+sent_0760,Cosmos,might no expressed concern for,Battra,unverified
+sent_0762,Russia,was transformed,an absolute monarchy,reject
+sent_0768,Le Griffon,shipwreck,Great Lakes,unverified
+sent_0771,he,without gave,recitals,reject
+sent_0771,he,without gave,concerts,reject
+sent_0771,he,without gave,master classes,reject
+sent_0771,he,without was,concert organists,unverified
+sent_0772,Scott,told,a casting director,reject
+sent_0772,he,met,Scott,reject
+sent_0774,Condon,not saw,Hauptmann,reject
+sent_0774,Condon,not told,Turrou,reject
+sent_0774,Condon,not passed,ransom money,unverified
+sent_0774,Condon,not passed,money,reject
+sent_0774,Condon,not identified,Hauptmann,reject
+sent_0774,Turrou,not was,FBI Special Agent,unverified
+sent_0774,Hauptmann,not was,in a lineup,unverified
+sent_0774,Condon,not went,Greenwich Street Station,reject
+sent_0774,Hauptmann,not was,in a lineup at,reject
+sent_0774,Condon,not went,New York Police Department,reject

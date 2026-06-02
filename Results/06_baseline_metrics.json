@@ -1,0 +1,22 @@
+{
+  "system": "Raw LLaMA",
+  "predictions_unique": 3983,
+  "gt_unique": 2456,
+  "TP": 1862,
+  "FP": 2121,
+  "FN": 594,
+  "precision": 0.4675,
+  "recall": 0.7581,
+  "f1_score": 0.5784,
+  "tier_breakdown": {
+    "tier1_exact": 288,
+    "tier2_semantic": 1572,
+    "tier3_fuzzy": 2,
+    "no_match": 2121
+  },
+  "thresholds": {
+    "tier2": 0.55,
+    "tier3": 0.45
+  },
+  "model": "all-mpnet-base-v2"
+}
