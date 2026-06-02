@@ -1,779 +1,614 @@
-# PERSEUS: PERceptual Semantic Extraction & Unified System
+**PERSEUS** stands for **PERceptual Semantic Extraction & Unified System**. It is a research pipeline for constructing knowledge graphs and ontologies from text, image, and audio inputs while reducing hallucinated or unsupported triples produced by large language models.
 
-**Embedding Clarity for Hallucination Optimization with Large Language Models**
+The project focuses on a practical problem in LLM-assisted knowledge graph construction: LLMs can extract fluent subject-predicate-object triples that appear plausible but are not entailed by the source material. PERSEUS addresses this by combining constrained triple extraction, evidence grounding, repair, Natural Language Inference (NLI) validation, entity clustering, and ontology construction.
 
----
-
-## Overview
-
-PERSEUS addresses a critical limitation of Large Language Models in knowledge graph construction: **factual hallucination**. When LLMs generate knowledge triples, they often produce fluent but incorrect assertions—plausible-sounding facts that have no grounding in the source text. This proves particularly dangerous in scientific and enterprise applications where factual accuracy is non-negotiable.
-
-PERSEUS solves this through an **evidence-grounded verification pipeline** that validates every extracted triple against its source material. Rather than trusting the LLM's output at face value, the system retrieves supporting evidence and applies formal logical verification before accepting any fact into the knowledge graph.
-
-### Key Contributions
-
-- **Statistically Validated Precision Gains**: 11% absolute improvement in precision (0.65 → 0.76) on the CaRB benchmark
-- **Dramatic Hallucination Reduction**: 55% decrease in false positives (1229 → 558 triples filtered)
-- **Multimodal Knowledge Extraction**: Unified pipeline for text, images, and audio via OCR, image captioning, and speech transcription into a common textual representation
-- **Robust Real-World Coverage**: Handles scanned documents, slides, screenshots, and recordings without changing downstream extraction or verification logic
-- **No Domain-Specific Rules**: Works across diverse text types without requiring custom ontology definitions
-- **Full Auditability**: Every decision is logged with confidence scores and supporting evidence
-- **Practical Accessibility**: Generates human-interpretable RDF ontologies ready for deployment
-
+> **Repository status:** this repository contains public-safe scaffolds, evaluation notebooks, benchmark templates, multimodal preprocessing utilities, sample abstract data, and result artifacts. Some core model prompts, proprietary logic, datasets, paths, and implementation details are intentionally redacted or represented as templates/stubs.
 
 ---
 
-## Architecture Overview
+## Table of Contents
 
-## Multimodal Input Support
-
-PERSEUS works beyond plain text by converting multiple modalities into a unified textual stream before extraction and verification:
-
-- **Text**: Directly processed via the standard five-stage pipeline.
-- **Images with text**: Passed through OCR (e.g., docTR) → cleaned text → triples.
-- **Images without text**: Captioned with a vision–language model (e.g., GIT-base) → descriptive text → triples.
-- **Audio**: Transcribed with Whisper → text → triples.
-
-Once converted to text, all modalities follow the same stages:
-
-Raw Text
-   ↓
-[1] Preprocessing 
-   ↓
-[2] Triple Extraction (LLM-based)
-   ↓
-[3] Hybrid Retrieval & NLI Verification
-   ↓
-[4] Entity Clustering
-   ↓
-[5] Ontology Construction
-   ↓
-Validated Knowledge Graph + Hierarchy
-```
-
-Each stage is designed for transparency: at any point, you can inspect what the system accepted and why.
+- [Project Overview](#project-overview)
+- [Research Motivation](#research-motivation)
+- [Pipeline Architecture](#pipeline-architecture)
+- [Repository Contents](#repository-contents)
+- [Core Modules](#core-modules)
+- [Notebooks and Experiments](#notebooks-and-experiments)
+- [Data and Result Files](#data-and-result-files)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Expected Workflow](#expected-workflow)
+- [Evaluation Summary](#evaluation-summary)
+- [Configuration Notes](#configuration-notes)
+- [Limitations](#limitations)
+- [Recommended Repository Structure](#recommended-repository-structure)
+- [Citation](#citation)
+- [License and Use](#license-and-use)
 
 ---
 
-## Stage 1: Preprocessing — The Minimal Triad 📝
+## Project Overview
 
-Before triple extraction, raw text undergoes three lightweight but crucial operations:
+PERSEUS is designed to transform raw multimodal inputs into a more trustworthy knowledge graph by requiring extracted triples to pass source-grounded validation before being stored or used for ontology construction.
 
-### 1.1 Normalization
-Removes boilerplate (navigation links, timestamps, metadata) and standardizes Unicode characters to ensure consistent input representation.
+At a high level, PERSEUS supports:
 
-**Example:**
-```
-Input:  "Click here to read more! ✓ Urban agriculture..."
-Output: "Urban agriculture..."
-```
-
-### 1.2 Segmentation
-Splits text into single-verb clauses, isolating predicates and reducing ambiguity for the extraction step.
-
-**Example:**
-```
-Input:  "Urban agriculture provides food and benefits biodiversity"
-Output: 
-  • Clause 1: "Urban agriculture provides food"
-  • Clause 2: "Urban agriculture benefits biodiversity"
-```
-
-```
-
-**Example Token Table (Urban Agriculture sentence):**
-
-| Token | POS | Syntactic Role 
-|-------|-----|---|--------|
-| Urban | ADJ | amod | 
-| agriculture | NOUN | nsubj | 
-| provides | VERB | root | 
-| food | NOUN | obj | 
-
-These weights are passed to the LLM as context, nudging it to focus on informationally dense portions of the text. This lightweight preprocessing balances data quality assurance without over-engineering.
+- **Text inputs**: research abstracts, technical documents, benchmark sentences, or raw text corpora.
+- **Image inputs with text**: screenshots, scanned documents, slides, forms, and document images processed through OCR.
+- **Image inputs without text**: natural images processed through image captioning models.
+- **Audio inputs**: speech data transcribed into text before extraction.
+- **Triple repair**: realignment of extracted subject/object spans to the original source sentence.
+- **Evidence-grounded validation**: lexical checks, BM25 retrieval, context-window escalation, and NLI verification.
+- **Ontology construction**: validated triples are used to induce classes, property assertions, and candidate axioms.
+- **Auditability**: accepted and rejected triples can be logged with confidence scores, error tags, and supporting evidence.
 
 ---
 
-## Stage 2: Triple Extraction — LLM Selection 🤖
+## Research Motivation
 
-PERSEUS evaluated four prominent 7-8B parameter language models to identify the best triple extractor:
+Knowledge graphs and ontologies are useful for structured reasoning, retrieval, validation, and semantic search. However, manual KG construction is slow and expensive. LLMs can accelerate triple extraction, but raw LLM extraction is risky because the model may introduce unsupported facts.
 
-### Model Evaluation Results
+PERSEUS is built around the following design principle:
 
-| Model | Precision | Recall | F1 | Key Observations |
-|-------|-----------|--------|-----|------------------|
-| **Llama3-8B** | 0.47 | 0.44 | **0.45** | **Consistent formatting, high instruction adherence** |
-| Mistral-7B | 0.47 | 0.44 | **0.45** | Accurate but unstructured outputs |
-| ChatGPT-4o-mini | 0.42 | 0.40 | 0.38 | Occasional summarization instead of extraction |
-| DeepSeek-7B | 0.30 | 0.29 | 0.30 | Frequent incomplete triples |
+> A triple should not enter the knowledge graph simply because an LLM generated it. It should enter only when the source text provides enough evidence to support it.
 
-While Mistral-7B matched Llama3-8B numerically (both F1 = 0.45), **Llama3-8B was selected for superior instruction adherence**—a qualitative factor crucial for downstream verification. The model consistently produced clean, structured output without extraneous text, reducing parsing errors and enabling more reliable verification.
-
-
-```
-
-
-### Relaxed Matching Criteria
-
-During evaluation, PERSEUS employs **relaxed matching rules** to accommodate minor variations in predicate and object phrasing without penalizing semantically equivalent extractions. This recognizes that different LLMs may phrase identical concepts differently (e.g., "benefits" vs. "enhances").
-
-#### Predicate Similarity Groups
-
-Seven predicate groups capture semantic equivalence:
-
-| Group | Included Predicates |
-|-------|---------------------|
-| **P1** (Benefit/Improvement) | benefits, enhances, improves, promotes, optimizes, helps |
-| **P2** (Usage/Leveraging) | uses, utilizes, leverages, integrates, employs |
-| **P3** (Causation/Enablement) | leads to, causes, results in, enables, allows, powers |
-| **P4** (Focus/Addressing) | is focused on, focuses on, addresses, targets |
-| **P5** (Inclusion/Composition) | includes, involves, has components, comprises, consists of |
-| **P6** (Impact/Change) | affects, impacts, influences, reshapes, transforms, changes |
-| **P7** (Provision/Offering) | provides, offers, supplies |
-
-#### Object/Subject Concept Groups
-
-Fourteen concept groups handle acronyms, synonyms, and domain-specific terminology:
-
-| Group | Included Terms |
-|-------|---------------|
-| **C1** (Diversity) | diversity, biodiversity |
-| **C2** (Produce) | produce, local produce, fresh local produce, crops |
-| **C3** (Retail/Commerce) | retail, stores, e-commerce, commerce, market |
-| **C4** (Data/Information) | data, information, knowledge |
-| **C5** (Energy) | renewable energy, renewable sources, clean energy |
-| **C6** (Challenges/Issues) | challenges, issues, concerns, limitations, drawbacks |
-| **C7** (Ethics/Responsibility) | ethics, bias, privacy, security, responsibility, regulation |
-| **C8** (Acronyms - General AI) | ai, artificial intelligence, machine learning |
-| **C9** (Acronyms - Vehicles) | ev, electric vehicle, electric vehicles, autonomous vehicles, self-driving cars |
-| **C10** (Acronyms - Process Automation) | rpa, robotic process automation |
-| **C11** (Acronyms - Language) | nlg, natural language generation |
-| **C12** (Acronyms - Reality) | ar, augmented reality, vr, virtual reality, immersive experiences |
-| **C13** (Computing Types) | quantum computing, edge computing, cloud computing |
-| **C14** (Healthcare Context) | healthcare, medical applications, diagnosis, treatment, patient care, drug discovery |
-
-These groups ensure fair evaluation across models with different linguistic tendencies while maintaining semantic integrity.
+The attached manuscript frames this as a hallucination-aware KG construction problem and evaluates PERSEUS against raw LLM extraction and traditional OpenIE baselines.
 
 ---
 
-## Stage 3: Hybrid Retrieval & NLI Verification 🔐
+## Pipeline Architecture
 
-This is the critical validation layer that distinguishes PERSEUS from naive LLM-only approaches. For each extracted triple, the system retrieves supporting evidence and applies logical inference verification.
+The PERSEUS pipeline is organized into five major stages.
 
-### 3.1 Hybrid Retrieval
-
-Each triple is queried against the source text using two complementary retrieval methods:
-
-**BM25 (Lexical Matching):**
-- Excels at keyword matching and exact term overlap
-- Captures precise terminology but misses paraphrases
-- Computationally efficient for candidate pruning
-
-**all-MiniLM-L6-v2 (Semantic Embeddings):**
-- Understands semantic relationships and paraphrasing
-- Fails on rare or domain-specific terms
-- Computationally heavier but captures conceptual meaning
-
-Results are fused using **Reciprocal Rank Fusion (RRF)** with k=60, which combines ranked lists without requiring training data. This approach is unsupervised, has been validated in specialized domains (medicine, law show 9-20% F1 gains), and requires no domain-specific tuning.
-
-**Query Construction:**
-- **For BM25**: Subject + Predicate + Object concatenated, tokenized, lemmatized, stop words removed
-- **For Dense**: Subject, Predicate, Object individually encoded, embeddings averaged (ensures predicate's semantic weight influences search direction)
-
-**Result**: Top 3 candidate sentences retrieved per triple
-
-### 3.2 NLI-Based Logical Verification
-
-For each candidate sentence, two verification methods are applied:
-
-#### Method 1: Lexical Consistency Check
-Confirms that the triple's subject and object appear in the candidate sentence.
-- **If successful**: confidence = 0.95 (high baseline confidence)
-- **If unsuccessful**: move to NLI verification
-
-#### Method 2: Natural Language Inference (NLI)
-Uses **BART-Large-MNLI** to test whether the sentence logically entails the triple.
-
-**Verification Formula:**
-
-The triple is verbalized as a hypothesis (e.g., "Urban agriculture benefits biodiversity") and the retrieved sentence serves as the premise. The NLI model computes: *Does the premise logically entail this hypothesis?*
-
-- **Entailment Score > 0.7**: Accept triple (confidence = NLI score)
-- **Entailment Score ≤ 0.7**: Reject triple
-
-**Context Expansion for Pronouns:**
-When pronouns or anaphoric references obscure meaning (e.g., "it provides benefits"), the premise is expanded to include the preceding sentence, providing broader textual context for more accurate NLI assessment.
-
-### 3.3 Verification Algorithm
-
-```
-For each triple t:
-  Retrieve top 3 candidate sentences C using hybrid search
-  
-  For each candidate sentence s in C:
-    1. Check lexical match (subject & object present)
-       If match → confidence = 0.95, mark as verified
-    
-    2. Convert triple to NLI hypothesis
-       Compute entailment score p_nli via BART-Large-MNLI
-       If p_nli > 0.7 → confidence = p_nli, mark as verified
-    
-    3. Select highest confidence match
-       Record: verification method, confidence score, supporting sentence
-  
-  If confidence > threshold:
-    Accept triple into validated set
-  Else:
-    Discard (log as unsupported)
+```text
+Raw multimodal input
+        |
+        v
+[1] Multimodal input acquisition
+        |
+        v
+[2] Text preprocessing and sentence segmentation
+        |
+        v
+[3] LLM-based triple extraction
+        |
+        v
+[4] Triple repair and grounding validation
+        |
+        v
+[5] Triple validation and ontology construction
+        |
+        v
+Validated triples, knowledge graph, and ontology artifacts
 ```
 
-**Output**: 
-- ✅ Validated triples (with supporting evidence and confidence scores)
-- ❌ Rejected triples (logged for analysis)
-- 📋 Verification logs (enables debugging and transparency)
+### 1. Multimodal Input Acquisition
 
----
+Inputs are normalized into textual form before triple extraction.
 
-## Stage 4: Entity Clustering — Inferring Class Hierarchies 🏗️
-
-Once triples are verified, their constituent entities (subjects and objects) are analyzed to discover semantic groupings, forming the basis for the ontology hierarchy.
-
-### 4.1 Entity Embedding
-
-All unique entities from validated triples are encoded into dense vectors using **bert-base-uncased**, capturing semantic meaning in a 768-dimensional space.
-
-**Example**: 
-- "anti-carcinogenic properties" → [0.12, -0.45, ..., 0.78]
-- "anti-inflammatory properties" → [0.11, -0.44, ..., 0.79]
-- (cosine similarity ≈ 0.93 → highly semantically related)
-
-Embeddings are z-score normalized to ensure similarity measures are interpretable and not skewed by extreme values.
-
-### 4.2 Comprehensive Clustering Algorithm Evaluation
-
-PERSEUS evaluated **six clustering algorithms** on a 30-entity flavonoid research corpus to identify the most semantically coherent approach:
-
-#### Algorithm Summary Statistics
-
-| Algorithm | Total Clusters | Entities Clustered | Noise/Outliers | Largest Cluster Size | Exemplars |
-|-----------|----------------|-------------------|----------------|---------------------|-----------|
-| **HAC** (Hierarchical Agglomerative Clustering) | 21 | 30 | 0 | 1 | N/A |
-| **HDBSCAN** (Hierarchical Density-Based) | 1 | 12 | 18 | 12 | N/A |
-| **Affinity Propagation** | 4 | 30 | 0 | 9 | 4 |
-| **Spectral Clustering** | 3 | 30 | 0 | 11 | N/A |
-| **DBSCAN** (Density-Based) | 5 | 17 | 13 | 4 | N/A |
-| **DPC** (Density Peaks Clustering) | 24 | 26 | 4 | 1 | N/A |
-
-**Key Observations:**
-- **HAC**: Over-fragmented (21 clusters, most with single entities)
-- **HDBSCAN**: Marked 60% of entities as noise (unacceptable semantic loss)
-- **DBSCAN**: Marked 43% as noise; remaining clusters too small
-- **DPC**: Severe over-fragmentation (24 clusters for 26 entities)
-- **Affinity Propagation & Spectral Clustering**: Both achieved full coverage with reasonable cluster counts
-
-#### Detailed Clustering Results (Selected Entities)
-
-Below is a comparative view showing how each algorithm clustered semantically related terms:
-
-| Entity | HAC | HDBSCAN | Affinity Prop. | Spectral | DBSCAN | DPC |
-|--------|-----|---------|----------------|----------|--------|-----|
-| **Flavonoids** | 14 | NOISE | 0 | 0 | 0 | NOISE |
-| **Research on Flavonoids** | 14 | NOISE | 0 | 0 | 0 | 0 |
-| **Characterization of flavonoids** | 14 | NOISE | 0 | 0 | 0 | 7 |
-| **Identification of flavonoids** | 14 | NOISE | 0 | 0 | 0 | 11 |
-| **Isolation of flavonoids** | 15 | NOISE | 0 | 0 | 0 | 16 |
-| **Studying functions of flavonoids** | 14 | NOISE | 0 | 0 | 0 | 20 |
-| | | | | | | |
-| **Anti-carcinogenic properties** | 18 | NOISE | 1 | 3 | NOISE | 1 |
-| **Anti-inflammatory properties** | 19 | NOISE | 1 | 3 | NOISE | 2 |
-| **Anti-mutagenic properties** | 16 | NOISE | 1 | 3 | NOISE | 3 |
-| **Anti-oxidative properties** | 17 | NOISE | 1 | 3 | NOISE | 4 |
-| | | | | | | |
-| **Bark** | 9 | NOISE | 3 | 1 | NOISE | 5 |
-| **Flowers** | 3 | NOISE | 3 | 1 | NOISE | 8 |
-| **Fruits** | 5 | NOISE | 3 | 1 | NOISE | 9 |
-| **Grains** | 7 | NOISE | 3 | 1 | NOISE | 10 |
-| **Roots** | 8 | NOISE | 3 | 1 | NOISE | 18 |
-| **Stems** | 4 | NOISE | 3 | 1 | NOISE | 19 |
-| **Tea** | 1 | NOISE | 3 | 1 | NOISE | 21 |
-| **Vegetables** | 6 | NOISE | 3 | 1 | NOISE | 22 |
-| **Wine** | 2 | NOISE | 3 | 1 | NOISE | 23 |
-| | | | | | | |
-| **Indispensable component in cosmetic applications** | 12 | NOISE | 4 | 4 | NOISE | 12 |
-| **Indispensable component in medicinal applications** | 10 | NOISE | 4 | 4 | 1 | 13 |
-| **Indispensable component in nutraceutical applications** | 11 | NOISE | 4 | 4 | NOISE | 14 |
-| **Indispensable component in pharmaceutical applications** | 10 | NOISE | 4 | 4 | 1 | 15 |
-| | | | | | | |
-| **Capacity to modulate key cellular enzyme function** | 20 | NOISE | 2 | 2 | NOISE | 6 |
-| **Potential drugs in preventing chronic diseases** | 13 | NOISE | 4 | 0 | NOISE | 17 |
-
-**Semantic Analysis:**
-- **Flavonoid-related terms** (rows 1-6): Only Affinity Propagation and Spectral Clustering unified these conceptually related entities into single clusters (both assigned Cluster 0). HAC fragmented them into 14 & 15; HDBSCAN/DBSCAN/DPC marked as noise or over-split.
-  
-- **"Anti-..." properties** (rows 8-11): Affinity Propagation (Cluster 1) and Spectral Clustering (Cluster 3) both correctly grouped these four semantically identical terms. HAC assigned each to different clusters (16-19).
-
-- **Natural sources** (rows 13-21): Both AP (Cluster 3) and SC (Cluster 1) unified plant parts and food/beverage sources. HAC fragmented into 9 separate clusters.
-
-- **Application domains** (rows 23-26): AP (Cluster 4) and SC (Cluster 4) correctly grouped "indispensable component in..." terms despite different application contexts.
-
-### 4.3 Internal Validation Metrics
-
-To select between Affinity Propagation and Spectral Clustering, three complementary metrics were evaluated:
-
-#### Silhouette Score (higher is better: -1 to +1)
-```
-s(i) = [b(i) − a(i)] / max{a(i), b(i)}
-```
-where:
-- a(i) = average distance within cluster
-- b(i) = distance to nearest other cluster
-
-Balances internal cohesion and separation without assumptions about cluster shape.
-
-#### Davies-Bouldin Index (lower is better)
-Quantifies average similarity between each cluster and its closest neighbor. Penalizes overlap and cluster imbalance. Assumes centroid-representable clusters (valid for semantic embedding spaces).
-
-#### Calinski-Harabasz Score (higher is better)
-```
-CH = [trace(B_k) / (k−1)] / [trace(W_k) / (N−k)]
-```
-where:
-- B_k = between-cluster dispersion matrix
-- W_k = within-cluster dispersion matrix
-- N = total entities, k = number of clusters
-
-Normalized by cluster count to prevent bias toward fragmentation. Computationally efficient.
-
-### 4.4 Final Algorithm Comparison
-
-| Metric | Affinity Propagation | Spectral Clustering (k=3) |
-|--------|---------------------|--------------------------|
-| Silhouette Score ↑ | 0.41 | **0.56** ✅ |
-| Davies-Bouldin ↓ | 1.02 | **0.71** ✅ |
-| Calinski-Harabasz ↑ | 214 | **297** ✅ |
-
-**Spectral Clustering** outperformed across all three metrics, indicating:
-- **Tighter clusters** (higher Silhouette)
-- **Better separation** (lower Davies-Bouldin)
-- **Stronger inter-cluster variance** (higher Calinski-Harabasz)
-
-The unanimous metric agreement provides robust confidence in the selection. The joint evaluation prevents overfitting to any single metric and ensures fair comparison between AP (auto k=4) and SC (optimized k=3).
-
-**Selected Algorithm**: **Spectral Clustering with k=3**
-
----
-
-## Stage 5: Ontology Construction 🌳
-
-Validated triples and clustered entities are synthesized into a structured RDF/OWL ontology.
-
-### 5.1 Class Hierarchy Generation
-
-For each cluster:
-1. Compute mean semantic similarity of each entity to all other cluster members
-2. Select entity with highest mean similarity → designate as `owl:Class` (cluster representative)
-3. Remaining cluster members become `rdfs:subClassOf` this parent class
-
-**Example Output:**
-```turtle
-# Cluster 0: Flavonoid Research Activities
-Class: FlavonoidResearch
-  SubClass: Characterization of flavonoids
-  SubClass: Identification of flavonoids
-  SubClass: Isolation of flavonoids
-  SubClass: Studying functions of flavonoids
-
-# Cluster 3: Antioxidant Properties
-Class: AntioxidantProperties
-  SubClass: Anti-carcinogenic properties
-  SubClass: Anti-inflammatory properties
-  SubClass: Anti-mutagenic properties
-  SubClass: Anti-oxidative properties
-
-# Cluster 1: Natural Sources
-Class: NaturalSources
-  SubClass: Bark
-  SubClass: Flowers
-  SubClass: Fruits
-  SubClass: Grains
-  SubClass: Roots
-  SubClass: Stems
-  SubClass: Tea
-  SubClass: Vegetables
-  SubClass: Wine
-```
-
-### 5.2 Semantic Annotations
-
-Each class receives:
-- **rdfs:label**: The entity string normalized to CamelCase (e.g., "AntioxidantProperties")
-- **rdfs:comment**: A contextual description generated from supporting sentences retrieved during verification
-
-The rdfs:comment generation is **human-in-the-loop**: machine-generated summaries (via Llama API using entity + originating paragraph) are presented for review and optionally refined before inclusion. This ensures annotation quality while maintaining efficiency.
-
-**Example Annotation:**
-```turtle
-Class: AntioxidantProperties
-  rdfs:label "Antioxidant Properties"
-  rdfs:comment "Flavonoids exhibit a broad spectrum of biological activities including 
-                anti-carcinogenic, anti-inflammatory, anti-mutagenic, and anti-oxidative 
-                properties, serving as potential therapeutic agents in chronic disease 
-                prevention."
-```
-
-Domain experts in our evaluation accepted **100% of auto-generated rdfs:comment entries** without modification, validating the quality of machine-generated annotations.
-
----
-
-## Evaluation Results 📊
-
-PERSEUS was evaluated on the **CaRB (Comprehensive Assessment of Relation Extraction Benchmark)**, a large-scale open information extraction dataset comprising diverse text domains.
-
-### Quantitative Performance
-
-| Metric | Direct LLM Baseline | PERSEUS | Absolute Change | Relative Change |
-|--------|---------------------|---------|-----------------|-----------------|
-| **Precision** | 0.65 | **0.76** | **+0.11** | **+17%** ✅ |
-| **Recall** | 0.74 | 0.57 | -0.17 | -23% |
-| **F1-Score** | 0.69 | 0.65 | -0.04 | -6% |
-| **False Positives** | 1229 | **558** | **-671** | **-55%** ✅ |
-| **True Positives** | 2232 | 1722 | -510 | -23% |
-
-### Statistical Significance
-
-A **McNemar's test** confirmed the precision improvement is not due to random chance:
-```
-χ²(1) = 319.07, p < 0.001 (highly statistically significant)
-```
-
-This test evaluates whether the proportion of discordant cases (triples where one method succeeds and the other fails) differs significantly between methods.
-
-### Contingency Table Analysis
-
-The McNemar's breakdown reveals the precision-recall trade-off mechanism:
-
-| | **LLM: Correct** | **LLM: Incorrect** |
+| Input type | Processing path | Example tools evaluated or referenced |
 |---|---|---|
-| **PERSEUS: Accepted** | 1571 (both correct) | 151 (PERSEUS recovers) |
-| **PERSEUS: Rejected** | 661 (PERSEUS filters correct) | 626 (both incorrect) |
+| Plain text | Direct text ingestion | Python text preprocessing |
+| Image with text | OCR to text | EasyOCR, Tesseract, docTR |
+| Image without text | Image captioning | BLIP, BLIP2, GIT, ViT-GPT-2 |
+| Audio | Speech transcription | Whisper |
 
-**Key Insights:**
-- **Cell (1,1)**: 1571 triples correctly identified by both methods (consensus)
-- **Cell (1,2)**: 151 correct triples **recovered by PERSEUS** that the baseline missed (demonstrates selective high-confidence extraction beyond baseline recall)
-- **Cell (2,1)**: 661 correct triples **over-filtered by PERSEUS** (source of recall reduction)
-- **Cell (2,2)**: 626 incorrect triples rejected by both (confirms baseline had substantial false positives)
+### 2. Text Preprocessing
 
-The statistical significance (p < 0.001) demonstrates that despite filtering 661 correct triples, the **simultaneous recovery of 151 missed triples plus elimination of 671 false positives** represents a beneficial trade-off for accuracy-critical applications.
+Preprocessing cleans and segments text before extraction. The public utility module includes a minimal preprocessing baseline that:
 
-### Trade-off Interpretation
+- normalizes whitespace,
+- removes simple boilerplate patterns,
+- splits text into sentence-like segments,
+- further segments clauses using lightweight rules,
+- preserves provenance metadata such as source identifier and modality.
 
-The precision-recall trade-off reflects PERSEUS's **design philosophy**: prioritize factual correctness over coverage. 
+### 3. Triple Extraction
 
-**Why this matters:**
-- In scientific publishing, a single hallucinated fact undermines trust in the entire knowledge graph
-- In enterprise applications (legal, medical, financial), false positives create liability
-- In automated decision-making, precision directly impacts downstream system reliability
+The research pipeline uses a constrained LLM extraction step to produce candidate triples in subject-predicate-object format. The public repository does **not** include private model prompts, model weights, or proprietary extraction logic. Instead, the included scaffold shows the expected interfaces and orchestration points.
 
-The 11% precision gain with 55% false positive reduction justifies the recall reduction for applications where **factual accuracy is paramount**.
+### 4. Triple Repair
 
-### Qualitative Results
+The manuscript describes a two-stage repair process:
 
-Domain experts reviewed PERSEUS-generated ontologies and confirmed:
-- ✅ **Tighter class hierarchies**: No spurious groupings; semantically coherent clusters
-- ✅ **Coherent entity relationships**: Triples reflect genuine source text assertions
-- ✅ **Annotation quality**: All auto-generated rdfs:comment entries accepted without modification
-- ✅ **Interpretability**: Ontology structure aligned with domain expert expectations
+- **R1 span canonicalization**: aligns extracted subjects and objects back to spans in the source sentence.
+- **R2 grounding validation**: drops triples whose arguments or predicates cannot be grounded in source evidence.
 
-**Example Comparison** (Urban Agriculture domain):
+Repair also preserves negation and modality cues so that speculative or negative claims are not converted into unsupported positive assertions.
 
-| Aspect | Direct LLM | PERSEUS |
-|--------|-----------|---------|
-| Class structure | Mixed unrelated concepts | Clear semantic groupings |
-| Triple accuracy | 65% correct | 76% correct |
-| False relationships | 35% hallucinated | 24% hallucinated |
-| Hierarchy depth | Shallow, over-generalized | Appropriate specificity |
+### 5. Triple Validation and Ontology Construction
 
----
+Validated triples pass through additional checks before being used for ontology construction:
 
-## Runtime and Scalability ⚡
-
-Processing 35 abstracts (~2,500 words) requires approximately **11 minutes** on standard hardware (MacBook M3 Pro, CPU-only NLI inference):
-
-| Stage | Approximate Time | Percentage of Total |
-|-------|------------------|---------------------|
-| Preprocessing | ~30 sec | 5% |
-| Triple extraction | ~2 min | 18% |
-| **Retrieval & verification** | **~7 min** | **64%** |
-| Entity clustering | ~1 min | 9% |
-| Ontology construction | ~30 sec | 5% |
-
-### Computational Bottleneck
-
-The **NLI verification step** dominates runtime due to:
-1. BART-Large-MNLI requires forward passes for each (triple, candidate sentence) pair
-2. Context expansion adds additional NLI evaluations for pronouns
-3. Sequential verification (each triple processed individually)
-
-**Scalability Improvements:**
-- **GPU acceleration**: Reduces NLI inference time by 5-10x
-- **Batch verification**: Group multiple triples for parallel NLI evaluation
-- **Candidate pruning**: Stricter retrieval thresholds reduce verification load
-- **Smaller NLI models**: Trade-off between speed and verification accuracy
-
-For production deployments on larger corpora (thousands of documents), GPU-accelerated batch processing is recommended.
+- local lexical subject/object checks,
+- local and context-window NLI,
+- retrieval trigger policy,
+- BM25 retrieval,
+- retrieval-stage NLI,
+- entity clustering,
+- axiom induction,
+- OWL/SHACL/OOPS-style verification checks,
+- human-readable ontology finalization.
 
 ---
 
-## Design Principles 💡
+## Repository Contents
 
-### 1. **Evidence-First Validation**
-Every triple must prove its support in the source text. There are no shortcuts to plausibility. The system never "trusts" LLM output—it demands textual grounding.
+The uploaded repository materials include the following files.
 
-### 2. **Transparency Over Complexity**
-The pipeline surfaces failure modes (extraction failures, retrieval gaps, verification rejections) rather than hiding them. Every decision includes:
-- Confidence score
-- Verification method used (lexical vs. NLI)
-- Supporting sentence
-- Accept/reject rationale
-
-This enables human review and iterative refinement.
-
-### 3. **No Domain-Specific Rules**
-The system requires no ontology templates, entity type definitions, or relation schemas. It works across diverse text types:
-- Academic abstracts
-- Technical reports
-- News articles
-- Legal documents
-- Medical literature
-
-No reconfiguration needed—same pipeline, same hyperparameters.
-
-### 4. **Flexible Model Choices**
-While PERSEUS defaults to:
-- **LLM**: Llama3-8B
-- **NLI Model**: BART-Large-MNLI
-- **Clustering**: Spectral Clustering (k=3)
-- **Embeddings**: bert-base-uncased, all-MiniLM-L6-v2
-
-...these components are **modular and swappable**. Alternative LLMs, NLI models, clustering algorithms, and embedding models can be substituted based on domain requirements, computational constraints, or emerging model capabilities.
-
-### 5. **Auditability and Reproducibility**
-Every decision is logged with:
-- Input text
-- Extracted triples
-- Retrieval results
-- Verification scores
-- Final acceptance status
-
-This enables:
-- **Debugging**: Trace why specific triples were accepted/rejected
-- **Compliance**: Demonstrate factual grounding for regulated industries
-- **Research**: Analyze failure modes and improve components
-- **Trust**: Users can inspect supporting evidence for any fact in the knowledge graph
+| File | Purpose |
+|---|---|
+| `README.md` | Earlier README draft containing a broad paper-style overview. |
+| `Pasted text(18).txt` | Manuscript LaTeX source for the paper, including motivation, methodology, evaluation, and results. |
+| `Sample_Code_for_Hallucination.py` | Public dependency-free scaffold for a hallucination-aware KG pipeline. It exposes data models and orchestration hooks but omits private implementations. |
+| `multimodal_conversion.py` | Public multimodal normalization and preprocessing utilities for text, image, and audio inputs. |
+| `clustering_algorithms_.ipynb` | Notebook for entity embedding and clustering algorithm experimentation. The notebook appears partially malformed as JSON but its source text is still inspectable. |
+| `Clustering_algo_results.docx` | Clustering output report comparing HDBSCAN, Affinity Propagation, Spectral Clustering, DBSCAN, and Density Peak Clustering. |
+| `Image_descriptor_comparison (1).ipynb` | Image captioning benchmark notebook comparing GIT, BLIP, ViT-GPT-2, and BLIP2 variants. |
+| `OCR_comp&results (1).ipynb` | OCR benchmark notebook comparing Tesseract, EasyOCR, Donut, Nougat, and docTR on document-image datasets. |
+| `perseus_rerun_template.ipynb` | Redacted CaRB rerun template for extraction, repair, validation, evaluation, McNemar testing, bootstrap confidence intervals, and error analysis. |
+| `perseus_ablation_template.ipynb` | Redacted ablation-study template for evaluating the contribution of repair, NLI, context windows, and retrieval. |
+| `Abstract.zip` | Collection of RTF research abstracts used as sample source material. |
 
 ---
 
-## Comparison with Naive LLM-Only Approaches
+## Core Modules
 
-### Baseline: Direct LLM Extraction
-```
-Raw Text → LLM (extract triples) → Knowledge Graph
-```
+### `multimodal_conversion.py`
 
-**Problems:**
-- No verification of triple accuracy → 35% false positives
-- Hallucinated triples accepted at face value
-- No transparency into which facts are supported
-- Fluent but factually incorrect relationships pass through unchecked
+This module provides public-safe utilities for converting heterogeneous inputs into text chunks and clause-level records.
 
-**Example Hallucination:**
-```
-Input: "Urban agriculture provides fresh produce."
-LLM Output: [Urban agriculture, increases, property values]  ❌ (not in source)
-```
+#### Main data structures
 
-### PERSEUS: Evidence-Grounded Pipeline
-```
-Raw Text → LLM (extract) → Retrieval (find evidence) → NLI (verify logic) → 
-Clustering (organize) → Knowledge Graph
-```
+| Class | Description |
+|---|---|
+| `RawInput` | Container for unprocessed input with `kind`, `payload`, and metadata. |
+| `TextChunk` | Normalized textual unit produced from text, image OCR/captioning, or audio transcription. |
+| `Clause` | Clause-level unit with provenance metadata for downstream extraction. |
 
-**Advantages:**
-- Every triple verified against source text → 76% precision
-- 55% fewer false positives
-- Full auditability (confidence scores + supporting sentences)
-- Hierarchical organization of concepts
-- Semantic clustering reveals implicit ontology structure
+#### Main classes
 
-**Same Example:**
-```
-Input: "Urban agriculture provides fresh produce."
-LLM Output: [Urban agriculture, increases, property values]
-Retrieval: No supporting sentence found
-NLI: Cannot verify entailment
-Result: REJECTED (logged as unsupported) ✅
-```
+| Class | Responsibility |
+|---|---|
+| `MultimodalNormalizer` | Routes text, image, and audio inputs into textual chunks. OCR, captioning, and ASR are extension points. |
+| `MinimalTriadPreprocessor` | Performs lightweight normalization and clause segmentation. |
 
----
+#### Extension points
 
-## Limitations & Future Work 🔮
-
-### Known Limitations
-
-#### 1. Precision-Recall Trade-off
-The focus on precision necessarily reduces recall. The NLI entailment threshold (0.7) can be lowered to recover more triples, but this reintroduces hallucinations. The current threshold balances these competing objectives based on CaRB benchmark analysis.
-
-**Mitigation**: Domain-specific threshold tuning based on application tolerance for false positives vs. false negatives.
-
-#### 2. Domain Shift in NLI
-BART-Large-MNLI is trained on general English (MNLI corpus). Performance may degrade on highly specialized domains:
-- Medical terminology (e.g., drug-gene interactions)
-- Legal jargon (e.g., statutory interpretations)
-- Scientific notation (e.g., chemical formulas)
-- Proprietary ontologies (e.g., enterprise-specific terminology)
-
-**Mitigation**: Fine-tune NLI models on domain-specific corpora or use domain-adapted NLI models (e.g., BioBERT for biomedical text).
-
-#### 3. Predicate Complexity
-The system assumes single-word or simple multi-word predicates. Complex relational structures require extensions:
-- **N-ary relations**: (Drug, treats, Disease, with dosage, 50mg)
-- **Temporal constraints**: (Company, acquired, Startup, in year, 2023)
-- **Modal qualifications**: (Model, may predict, Outcome)
-
-**Mitigation**: Extend triple schema to RDF* or property graphs with edge attributes.
-
-#### 4. Pronoun Resolution
-While context expansion partially addresses anaphora, limitations remain:
-- **Multi-sentence dependencies**: "The company launched a product. It succeeded. This boosted revenue." (ambiguous "this")
-- **Distant pronouns**: Pronouns referring to entities 3+ sentences away
-- **Complex coreference**: Multiple entities with same pronoun (e.g., "he" referring to multiple people)
-
-**Mitigation**: Integrate dedicated coreference resolution models (e.g., SpanBERT-based coreference).
-
-#### 5. Computational Bottleneck
-NLI verification scales linearly with number of triples × candidate sentences. For large corpora (10,000+ documents), this becomes prohibitive without GPU acceleration or parallelization.
-
-**Mitigation**: Batch processing, GPU acceleration, or approximate retrieval methods (FAISS).
-
-### Future Directions
-
-#### Short-Term Enhancements
-- **Domain Adaptation**: Fine-tune NLI on biomedical, legal, financial corpora
-- **GPU Optimization**: Implement batch NLI verification for 5-10x speedup
-- **Threshold Tuning Interface**: Allow users to adjust precision-recall balance interactively
-- **Coreference Integration**: Add SpanBERT or Longformer-based pronoun resolution
-
-#### Medium-Term Extensions
-- **Multi-Hop Reasoning**: Chain triples for transitive inference (A→B, B→C ⇒ A→C)
-- **Temporal Reasoning**: Add support for time-dependent facts and event sequences
-- **Uncertainty Quantification**: Express confidence intervals for borderline triples
-- **Incremental Updates**: Support knowledge graph updates without full reprocessing
-
-#### Long-Term Vision
-- **Interactive Refinement**: User feedback loops to refine clustering and class hierarchies
-- **Multi-Lingual Support**: Extend to non-English texts via multilingual models
-- **Hybrid Human-AI Workflows**: Active learning for efficient expert annotation
-- **Knowledge Graph Completion**: Predict missing triples based on graph structure
-
----
-
-## Installation & Usage
-
-### Prerequisites
-```
-Python 3.9+
-PyTorch 2.0+
-transformers (Hugging Face)
-scikit-learn
-stanza
-sentence-transformers
-rank_bm25
-rdflib (for RDF/OWL generation)
-```
-
-### Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/PERSEUS.git
-cd PERSEUS
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download Stanza models
-python -c "import stanza; stanza.download('en')"
-
-# Run sample workflow
-python examples/sample_workflow.py --input sample_text.txt --output ontology.owl
-```
-
-### Configuration Options
-
-Create a `config.yaml` file to customize pipeline behavior:
-
-```yaml
-# Model Selection
-llm_model: "meta-llama/Llama-3-8B"
-nli_model: "facebook/bart-large-mnli"
-embedding_model: "bert-base-uncased"
-retrieval_model: "sentence-transformers/all-MiniLM-L6-v2"
-
-# Hyperparameters
-temperature: 0.5
-max_tokens: 500
-nli_threshold: 0.7
-lexical_confidence: 0.95
-top_k_retrieval: 3
-rrf_k: 60
-
-# Clustering
-clustering_algorithm: "spectral"  # Options: spectral, affinity_propagation
-num_clusters: 3  # For spectral clustering; auto-determined for affinity propagation
-validation_metrics: ["silhouette", "davies_bouldin", "calinski_harabasz"]
-
-# Output
-output_format: "owl"  # Options: owl, rdf, jsonld
-include_annotations: true
-human_in_loop: true  # Review rdfs:comment before finalizing
-```
-
-### Example Usage
+The following methods are intentionally abstract and must be implemented by the integrating application:
 
 ```python
-from PERSEUS import PERSEUSPipeline
+def _run_ocr(self, image: Any) -> str:
+    raise NotImplementedError
 
-# Initialize pipeline
-pipeline = PERSEUSPipeline(config_path="config.yaml")
+def _run_captioning(self, image: Any) -> str:
+    raise NotImplementedError
 
-# Process text
-text = """
-Flavonoids are natural substances with variable phenolic structures 
-found in fruits, vegetables, grains, bark, roots, stems, flowers, 
-tea and wine. They exhibit anti-carcinogenic, anti-inflammatory, 
-anti-mutagenic, and anti-oxidative properties.
-"""
+def _run_asr(self, audio: Any) -> str:
+    raise NotImplementedError
+```
 
-# Extract verified knowledge graph
-results = pipeline.process(text)
+This design keeps the public module lightweight while allowing production systems to plug in OCR, captioning, or ASR backends.
 
-# Access results
-print(f"Extracted {len(results.triples)} verified triples")
-print(f"Identified {len(results.clusters)} semantic clusters")
-print(f"Average confidence: {results.avg_confidence:.2f}")
+### `Sample_Code_for_Hallucination.py`
 
-# Export ontology
-results.export("flavonoid_ontology.owl", format="owl")
+This file is a public scaffold for the end-to-end hallucination-aware KG pipeline.
 
-# Inspect verification logs
-for triple, log in results.verification_logs.items():
-    print(f"{triple}")
-    print(f"  Method: {log.method}")
-    print(f"  Confidence: {log.confidence}")
-    print(f"  Supporting: {log.supporting_sentence}")
+#### Data models
+
+| Class | Description |
+|---|---|
+| `Triple` | Subject-predicate-object candidate fact. |
+| `Evidence` | Candidate supporting sentence with retrieval-rank metadata. |
+| `ValidationResult` | Verification decision for a triple, including acceptance status and entailment score. |
+
+#### Pipeline constants
+
+```python
+RRF_K = 60
+ENTAILMENT_THRESHOLD = 0.70
+LEXICAL_ENTITY_CHECK = 0.95
+```
+
+#### Pipeline stages exposed by `EchoLLMPipeline`
+
+| Method | Intended role |
+|---|---|
+| `preprocess()` | Normalize and segment source text. |
+| `extract_triples()` | Call an instruction-following LLM to produce triples. Placeholder only. |
+| `retrieve_evidence()` | Retrieve supporting sentences using lexical and dense retrieval. Placeholder only. |
+| `verify()` | Apply lexical/NLI validation. Placeholder only. |
+| `cluster_entities()` | Cluster entities to induce ontology classes. Placeholder only. |
+| `build_ontology()` | Build a serializable ontology-like output from accepted triples. |
+| `run()` | Orchestrate the full pipeline. |
+
+The scaffold is intentionally runnable but does not perform real extraction or verification until private implementations are added.
+
+---
+
+## Notebooks and Experiments
+
+### `perseus_rerun_template.ipynb`
+
+A redacted template for rerunning PERSEUS on the CaRB benchmark. It is structured around the following workflow:
+
+1. configure paths and runtime settings,
+2. load Llama, NLI, SBERT, and spaCy models,
+3. load and normalize CaRB ground truth,
+4. extract raw LLM triples,
+5. repair triples,
+6. validate triples using lexical, NLI, window, and BM25 stages,
+7. evaluate predictions with three-tier semantic matching,
+8. compute McNemar tests and bootstrap confidence intervals,
+9. perform error analysis and timing summaries.
+
+The template contains redacted paths and placeholder functions, so it should be treated as a reproducibility skeleton rather than a plug-and-play notebook.
+
+### `perseus_ablation_template.ipynb`
+
+A redacted ablation-study template used to estimate the contribution of individual pipeline components. The notebook is organized around variants such as:
+
+- baseline raw LLM output,
+- repair enabled/disabled,
+- local NLI enabled/disabled,
+- context-window escalation enabled/disabled,
+- retrieval enabled/disabled.
+
+It is intended to produce ablation summaries and compare each variant against the raw LLM baseline.
+
+### `Image_descriptor_comparison (1).ipynb`
+
+This notebook benchmarks captioning models on a 200-sample image-caption dataset. Reported models include:
+
+- `microsoft/git-base`,
+- `microsoft/git-large`,
+- `Salesforce/blip-image-captioning-base`,
+- `Salesforce/blip-image-captioning-large`,
+- `nlpconnect/vit-gpt2-image-captioning`,
+- `Salesforce/blip2-opt-2.7b`.
+
+Reported metrics include CLIPScore, semantic similarity, ROUGE-L, and METEOR.
+
+Representative reported results:
+
+| Model | CLIPScore | Semantic Similarity | ROUGE-L | METEOR |
+|---|---:|---:|---:|---:|
+| GIT-base | 0.2754 | 0.6604 | 0.4503 | 0.3103 |
+| GIT-large | 0.2711 | 0.6576 | 0.4362 | 0.3005 |
+| BLIP-base | 0.2870 | 0.7243 | 0.5473 | 0.4237 |
+| BLIP-large | 0.2936 | 0.7675 | 0.5157 | 0.4992 |
+| ViT-GPT-2 | 0.2931 | 0.7406 | 0.5660 | 0.4890 |
+| BLIP2-OPT | 0.3008 | 0.7801 | 0.5903 | 0.4849 |
+
+In these results, BLIP2-OPT performs strongest on CLIPScore, semantic similarity, and ROUGE-L, while BLIP-large is strongest on METEOR.
+
+### `OCR_comp&results (1).ipynb`
+
+This notebook compares OCR/document-understanding models across multiple experiments. Evaluated systems include:
+
+- Tesseract,
+- EasyOCR,
+- Donut,
+- Nougat,
+- docTR.
+
+Representative reported results include:
+
+| System | WER | CER | Notes |
+|---|---:|---:|---|
+| Tesseract | 0.8873 | 0.6849 | Baseline OCR run. |
+| EasyOCR | 0.7216 | 0.3227 | Stronger WER/CER than Tesseract in the reported run. |
+| Donut | 1.0000 | 1.0000 | Weaker in the reported setup. |
+| Nougat | 1.5698 | 1.5657 | Weaker in the reported setup. |
+| docTR | 0.8604 | 0.2519 | Lower CER but higher WER than the previous EasyOCR champion in the reported comparison. |
+
+The notebook also includes Hugging Face authentication and dataset availability checks. Some cells require a valid Hugging Face token or access to specific hosted datasets.
+
+### `clustering_algorithms_.ipynb` and `Clustering_algo_results.docx`
+
+The clustering materials evaluate entity clustering over flavonoid-related triples. Algorithms explored include:
+
+- HDBSCAN,
+- Affinity Propagation,
+- Spectral Clustering,
+- DBSCAN,
+- Density Peak Clustering,
+- hierarchical/agglomerative clustering in the broader manuscript context.
+
+The result document reports clustering behavior over 31 unique entities. It shows that density-based methods can mark many entities as noise, while Affinity Propagation and Spectral Clustering provide broader entity coverage. The manuscript positions Spectral Clustering as the selected clustering method for ontology class induction.
+
+---
+
+## Data and Result Files
+
+### `Abstract.zip`
+
+The archive contains 39 RTF abstracts covering topics such as:
+
+- artificial intelligence,
+- natural language processing,
+- healthcare AI,
+- cybersecurity,
+- quantum computing,
+- autonomous vehicles,
+- renewable energy,
+- climate change,
+- cultural heritage,
+- robotics,
+- biotechnology,
+- e-commerce,
+- virtual and augmented reality.
+
+These abstracts are useful as sample documents for text extraction, triple generation, and human-curated evaluation.
+
+### `Clustering_algo_results.docx`
+
+This document contains printed clustering outputs, including:
+
+- entity extraction summary,
+- embedding generation summary,
+- per-algorithm cluster assignments,
+- noise/outlier lists,
+- internal validation metrics such as Silhouette, Davies-Bouldin, and Calinski-Harabasz scores.
+
+---
+
+## Installation
+
+The exact dependency set depends on which part of the repository you run. The public scaffolds require only standard Python libraries, while the notebooks require machine learning, NLP, OCR, and evaluation libraries.
+
+### Minimum Python version
+
+Python 3.10 or later is recommended.
+
+### Minimal dependencies for public scaffolds
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+The two public Python files use mostly standard-library imports. No model inference dependencies are required to run the placeholder scaffold.
+
+### Recommended research dependencies
+
+Install the following when running the notebooks or filling in private implementations:
+
+```bash
+pip install \
+  numpy \
+  pandas \
+  scikit-learn \
+  scipy \
+  torch \
+  transformers \
+  sentence-transformers \
+  spacy \
+  nltk \
+  rdflib \
+  owlready2 \
+  pyshacl \
+  rank-bm25 \
+  statsmodels \
+  matplotlib \
+  tqdm \
+  jiwer \
+  pillow \
+  evaluate \
+  datasets
+```
+
+For OCR and document-image experiments:
+
+```bash
+pip install pytesseract easyocr python-doctr opencv-python-headless
+```
+
+System-level Tesseract may also be required:
+
+```bash
+# Ubuntu/Debian
+sudo apt-get update
+sudo apt-get install -y tesseract-ocr
+```
+
+For spaCy preprocessing:
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+For notebooks that use Hugging Face-hosted models or gated datasets, authenticate first:
+
+```bash
+huggingface-cli login
 ```
 
 ---
+
+## Quick Start
+
+### 1. Run the public scaffold
+
+```bash
+python Sample_Code_for_Hallucination.py
+```
+
+Expected behavior: the script runs a smoke-test pipeline over placeholder text and prints an ontology summary. It will not extract real triples until private implementations are added.
+
+### 2. Use the multimodal preprocessing utility
+
+```python
+from multimodal_conversion import RawInput, MultimodalNormalizer, MinimalTriadPreprocessor
+
+class DemoNormalizer(MultimodalNormalizer):
+    def _run_ocr(self, image):
+        return "Example OCR text from image."
+
+    def _run_captioning(self, image):
+        return "Example image caption."
+
+    def _run_asr(self, audio):
+        return "Example transcript from audio."
+
+raw_inputs = [
+    RawInput(kind="text", payload="Urban agriculture provides food and benefits biodiversity.", metadata={"id": "sample_1"}),
+    RawInput(kind="image", payload="path/to/image.png", metadata={"id": "sample_image"}),
+]
+
+normalizer = DemoNormalizer()
+chunks = normalizer.normalize(raw_inputs)
+
+preprocessor = MinimalTriadPreprocessor()
+clauses = preprocessor.preprocess_chunks(chunks)
+
+for clause in clauses:
+    print(clause)
+```
+
+### 3. Run evaluation notebooks
+
+Open the notebooks in Jupyter or Google Colab:
+
+```bash
+jupyter lab
+```
+
+Recommended order:
+
+1. `Image_descriptor_comparison (1).ipynb`
+2. `OCR_comp&results (1).ipynb`
+3. `perseus_rerun_template.ipynb`
+4. `perseus_ablation_template.ipynb`
+5. `clustering_algorithms_.ipynb`
+
+Before running benchmark notebooks, replace redacted paths and placeholders with your local paths, model names, and dataset locations.
+
+---
+
+## Expected Workflow
+
+A typical PERSEUS experiment follows this flow:
+
+1. **Prepare input corpus**
+   - Use raw text, RTF abstracts, images, or audio.
+   - Convert all modalities to text.
+
+2. **Preprocess text**
+   - Normalize characters and whitespace.
+   - Remove boilerplate.
+   - Segment into sentences or clauses.
+   - Assign stable sentence/source identifiers.
+
+3. **Extract candidate triples**
+   - Run the configured LLM extractor.
+   - Parse output into `[subject, predicate, object]` triples.
+   - Remove malformed or duplicate triples.
+
+4. **Repair triples**
+   - Align subject and object spans to the source sentence.
+   - Normalize predicates.
+   - Preserve negation and modality cues.
+   - Drop ungroundable triples.
+
+5. **Validate triples**
+   - Run lexical checks.
+   - Run NLI on source sentence and optional context window.
+   - Trigger retrieval for uncertain or weakly supported cases.
+   - Run BM25 retrieval and retrieval-stage NLI.
+   - Assign accept/reject/unverified status.
+
+6. **Evaluate predictions**
+   - Match predictions against ground truth.
+   - Compute precision, recall, F1, false positives, and false negatives.
+   - Run McNemar tests and bootstrap confidence intervals.
+
+7. **Build ontology**
+   - Cluster entities.
+   - Induce candidate classes and axioms.
+   - Verify axioms through statistical, reasoner, pitfall, and SHACL checks.
+   - Add human-readable labels and comments.
+
+---
+
+## Evaluation Summary
+
+The manuscript reports that PERSEUS improves precision over raw LLM extraction on CaRB while trading off recall. In the compact CaRB results table included in the manuscript:
+
+| System | Precision | Recall | F1 |
+|---|---:|---:|---:|
+| Raw LLaMA | 46.8% | 75.8% | 57.8% |
+| PERSEUS | 58.4% | 59.0% | 58.7% |
+
+The reported precision change is +11.7 percentage points with a bootstrap 95% confidence interval of approximately `[+9.2, +14.2]`. The manuscript reports a McNemar test with `p = 2.0 x 10^-84`, indicating a systematic difference in error patterns.
+
+The important interpretation is not that PERSEUS maximizes recall. It deliberately acts as a precision-oriented verification layer. This is appropriate when unsupported triples are more damaging than missed triples, such as in scientific, medical, legal, enterprise, or ontology-engineering contexts.
+
+---
+
+## Configuration Notes
+
+### Model configuration
+
+The manuscript and notebooks reference several model families:
+
+| Component | Models referenced |
+|---|---|
+| Triple extraction | Llama 3 8B, Mistral, DeepSeek, ChatGPT variants |
+| NLI validation | RoBERTa-Large-MNLI, BART-Large-MNLI in earlier drafts/context |
+| Embeddings | SentenceTransformers, SBERT, BERT-based entity embeddings |
+| OCR | EasyOCR, Tesseract, docTR, Donut, Nougat |
+| Image captioning | BLIP, BLIP2, GIT, ViT-GPT-2 |
+| Audio transcription | Whisper |
+
+Use the manuscript and template notebooks as the source of truth for the specific experiment you are reproducing, because older draft README claims and newer manuscript numbers may differ.
+
+### Hardware
+
+The manuscript reports experiments using GPU-enabled hardware. Some notebooks can run on CPU but will be slow, especially for:
+
+- LLM triple extraction,
+- NLI verification,
+- image captioning,
+- OCR benchmarks,
+- embedding-heavy clustering.
+
+GPU acceleration is recommended for full benchmark runs.
+
+---
+
+## Limitations
+
+This repository should not be treated as a complete production implementation without additional work.
+
+Known limitations:
+
+- Public files intentionally omit private prompts, model weights, corpora, and proprietary logic.
+- Several notebooks contain redacted paths or placeholder functions.
+- `Sample_Code_for_Hallucination.py` is a scaffold, not a functioning extraction/verification engine.
+- `multimodal_conversion.py` requires concrete OCR, captioning, and ASR implementations to process images/audio.
+- Some notebooks require Hugging Face authentication and access to external datasets.
+- `clustering_algorithms_.ipynb` appears to contain malformed JSON and may need repair before opening normally in Jupyter.
+- Reported metrics may differ across README drafts, notebook outputs, and manuscript revisions. The attached manuscript should be treated as the most current research context.
+
+---
+
+
+## Citation
+
+If you use this work, cite the accompanying manuscript:
+
+```bibtex
+@article{dalal_perseus_2026,
+  title   = {Hallucination-Aware Knowledge Graph Construction with LLMs},
+  author  = {Dalal, Aryan Singh and McGinty, Hande Kucuk},
+  year    = {2026},
+  note    = {Manuscript in preparation}
+}
+```
+
+
 
 ---
 
